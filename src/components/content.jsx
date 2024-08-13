@@ -54,7 +54,7 @@ const AboutPage = () => {
   };
 
   const paragraphStyle = {
-    fontSize: isMobile ? '1.8rem' : '2rem',
+    fontSize: isMobile ? '1.5rem' : '1.8rem',
     lineHeight: '1.6',
     marginBottom: '15px',
     textAlign: 'justify',
