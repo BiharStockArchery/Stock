@@ -16,10 +16,12 @@ const AboutPage = () => {
 
   const containerStyle = {
     width: '100%',
+    marginBottom: 'none',
     margin: '0 auto',
     padding: '20px',
     backgroundColor: 'rgba(37, 37, 37, 1)',
-    color: '#febb12'
+    color: '#febb12',
+    
   };
 
   const headerStyle = {
@@ -73,7 +75,8 @@ const AboutPage = () => {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    gap: '20px'
+    gap: '20px',
+    marginBottom:'30px'
   };
 
   const cardContainerStyle = {
@@ -155,7 +158,7 @@ const AboutPage = () => {
 
   const cardData = [
     { 
-      title: 'Live market Sessions', 
+      title: 'Live Market Sessions', 
       text: 'Our trading floor, the first of its kind in Bihar, offers a unique opportunity to learn and trade during live market.',
       image: './images/1st.jpeg',
       backText: 'Join our live market sessions to gain real-time trading experience and insights from industry experts.'
@@ -173,7 +176,7 @@ const AboutPage = () => {
       backText: 'Clear your doubts with in-depth sessions focused on addressing your specific trading challenges.'
     },
     { 
-      title: 'One Year Handhold Support', 
+      title: '1 Year Handhold Support', 
       text: 'We actively engage with and support our local communities through various initiatives and partnerships.',
       image: './images/4th.jpeg',
       backText: 'Enjoy a full year of support, ensuring you stay on track with your trading goals and progress.'

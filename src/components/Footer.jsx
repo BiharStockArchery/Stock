@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { FaLinkedin, FaInstagram, FaYoutube, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faInstagram, faYoutube, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const phoneNumber = '+917371089421'; // Your phone number in international format
@@ -12,14 +13,13 @@ const Footer = () => {
       <section className="contact-short">
         <div className="grid grid-two-column">
           <div className="contact-text">
-            
             <h3>Talk to us today</h3>
           </div>
 
           <div className="contact-short-btn">
             <a href={whatsappURL} target="_blank" rel="noopener noreferrer">
               <StyledButton>
-                <FaWhatsapp className="whatsapp-icon" />
+                <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" />
                 <span>Contact Us</span>
               </StyledButton>
             </a>
@@ -56,27 +56,21 @@ const Footer = () => {
           <div className="footer-social">
             <h3>Follow Us</h3>
             <div className="footer-social--icons">
-            <a href="https://www.linkedin.com/company/stockarchery/" target="_blank" rel="noopener noreferrer">
-              <div>
-                <FaLinkedin className="icons" />
-              </div>
+              <a href="https://www.linkedin.com/company/stockarchery/" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faLinkedin} style={{ color: "#0077b5" }} className="icons" />
               </a>
               
-                <a href="https://www.instagram.com/stock.archery/?hl=en" target="_blank" rel="noopener noreferrer">
-                <div>
-                  <FaInstagram className="icons" />
-
-              </div>
+              <a href="https://www.instagram.com/stock.archery/?hl=en" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faInstagram} beat style={{ color: "#e1306c" }} className="icons" />
               </a>
               
-                <a href="https://www.youtube.com/@stock.archery" target="_blank" rel="noopener noreferrer">
-                <div><FaYoutube className="icons" /></div>
-                </a>
+              <a href="https://www.youtube.com/@stock.archery" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faYoutube} style={{ color: "#ff0000" }} className="icons" />
+              </a>
               
-             
-                <a href="https://x.com/stockarchery" target="_blank" rel="noopener noreferrer">
-                <div><FaTwitter className="icons" /></div>
-                </a>
+              <a href="https://x.com/stockarchery" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faTwitter} style={{ color: "#000000" }} className="icons" />
+              </a>
               
             </div>
           </div>
@@ -150,31 +144,28 @@ const Wrapper = styled.section`
       margin-bottom: 2.4rem;
       font-size: 2.3rem;
     }
+
     .stock {
       color: #ffffff; /* White color for Stock */
     }
+
     .archery {
       color: #febb12; /* Existing color for Archery */
     }
+
     p {
       color: #febb12;
       font-size: 2rem;
     }
+
     .footer-social--icons {
       display: flex;
       gap: 2rem;
 
-      div {
-        padding: 1rem;
-        border-radius: 50%;
-        border: 2px solid #febb12;
-
-        .icons {
-          color: #febb12;
-          font-size: 2.4rem;
-          position: relative;
-          cursor: pointer;
-        }
+      .icons {
+        font-size: 2.4rem;
+        color: inherit; /* Use color from parent element */
+        cursor: pointer;
       }
     }
 
@@ -183,7 +174,6 @@ const Wrapper = styled.section`
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        
 
         input[type="email"] {
           width: 250px;
@@ -197,7 +187,7 @@ const Wrapper = styled.section`
           padding: 0.75rem 1rem;
           border-radius: 0.25rem;
           border: 1px solid #febb12;
-          background-color:#febb12;
+          background-color: #febb12;
           color: #000000;
           cursor: pointer;
           transition: all 0.3s ease;

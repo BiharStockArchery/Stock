@@ -42,8 +42,9 @@ const TextContent = styled.div`
   h2 {
     font-size: 5rem;
     color: #fff;
-    margin: 0; /* Remove margin */
-    padding: 0; /* Remove padding */
+    margin: none; /* Remove margin */
+    padding: none; /* Remove padding */
+    
     
     span {
       color: #febb12;
@@ -75,7 +76,7 @@ const Video = () => {
         ></iframe>
       </VideoWrapper>
       <TextContent>
-        <b><h2>Bihar's <span>First</span> Trading <span>Floor</span></h2></b>
+        <h2>Bihar's <span>First</span> Trading <span>Floor</span></h2>
         <p>Experience Bihar’s premier stock market institute where education meets action. Our live trading classes allow students to learn and trade simultaneously in a real market setting. Gain hands-on experience, guided by expert mentors, and master strategies that work. Join us and elevate your trading skills with real-time practice.</p>
       </TextContent>
     </Container>

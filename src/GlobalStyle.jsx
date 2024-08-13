@@ -43,7 +43,7 @@ h1 {
 h2 {
   color: ${({ theme }) => theme.colors.heading};
   font-size: 4.4rem;
-  font-weight: 300;
+  font-weight: 500;
   white-space: normal;
   text-align: center;
 }
