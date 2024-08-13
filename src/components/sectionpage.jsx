@@ -85,6 +85,7 @@ const Heading = styled.h2`
 const Text = styled.p`
   font-size: 14px;
   color: #FDD788;
+  
 `;
 
 const HorizontalLine = styled.hr`
@@ -116,17 +117,17 @@ const SectionsPage = () => (
     <Row>
       <SectionComponent
         image="./images/4th.jpeg"
-        heading="Bihar’s First Live Trading Institute"
+        heading={<><strong>Bihar’s First Live Trading Institute</strong></>}
         text="The only institute in Bihar offering real-time trading classes, setting a new standard for stock market education."
       />
       <SectionComponent
         image="./images/2nd.jpeg"
-        heading="Learn and Trade Simultaneously"
+        heading={<><strong>Learn and Trade Simultaneously</strong></>}
         text="Students gain hands-on experience by learning and trading in a live market environment."
       />
       <SectionComponent
         image="./images/3rd.jpeg"
-        heading="Expert Mentor Guidance"
+        heading={<><strong>Expert Mentor Guidance</strong></>}
         text="Benefit from personalized instruction and proven strategies from seasoned trading professionals."
       />
     </Row>
@@ -134,12 +135,12 @@ const SectionsPage = () => (
     <Row>
       <SectionComponent
         image="./images/1st.jpeg"
-        heading="Real-Time Market Exposure"
+        heading={<><strong>Real-Time Market Exposure</strong></>}
         text="Develop practical trading skills with immediate application in the live market."
       />
       <SectionComponent
         image="./images/5th.jpeg"
-        heading="Comprehensive Trading Experience"
+        heading={<><strong>Comprehensive Trading Experience</strong></>}
         text="A unique blend of theoretical knowledge and practical execution, ensuring well-rounded trading expertise."
       />
      

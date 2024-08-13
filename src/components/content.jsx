@@ -216,7 +216,7 @@ const AboutPage = () => {
                   alt={card.title}
                   style={cardImageStyle}
                 />
-                <h2 style={cardHeadingStyle}>{card.title}</h2>
+                <strong><h2 style={cardHeadingStyle}>{card.title}</h2></strong>
                 <p style={cardTextStyle}>{card.text}</p>
               </div>
               <div style={flipCardBackStyle}>
