@@ -15,9 +15,11 @@ const New = () => {
             <span className="stock">Stock</span> <span className="archery">Archery</span>
           </h1>
           <p className="hero-para">{paragraph}</p>
-          <Button className="btn hireme-btn">
-            <NavLink to="/content">Know more</NavLink>
-          </Button>
+         
+            <NavLink to="/content"> 
+            <Button className="btn hireme-btn">Know more</Button>
+            </NavLink>
+          
         </div>
 
         <div className="section-hero-image">
