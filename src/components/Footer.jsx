@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faInstagram, faYoutube, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faInstagram, faYoutube, faTwitter, faWhatsapp, } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const phoneNumber = '+917371089421'; // Your phone number in international format
@@ -69,7 +69,7 @@ const Footer = () => {
               </a>
               
               <a href="https://x.com/stockarchery" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faTwitter} beat style={{ color: "#000000" }} className="icons" />
+                <FontAwesomeIcon icon={faTwitter} beat style={{ color: "#0077b5" }} className="icons" />
               </a>
               
             </div>
