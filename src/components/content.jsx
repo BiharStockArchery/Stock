@@ -58,7 +58,7 @@ const AboutPage = () => {
     lineHeight: '1.6',
     marginBottom: '15px',
     textAlign: 'justify',
-    color: '#febb12'
+    color: '#FDD788'
   };
 
   const cardsHeaderStyle = {
