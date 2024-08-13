@@ -100,7 +100,7 @@ const AboutPage = () => {
     width: '100%',
     height: '100%',
     backfaceVisibility: 'hidden',
-    backgroundColor: '#f9f9f9',
+    backgroundColor: 'rgba(37,37,37,255)',
     color: '#febb12',
     display: 'flex',
     flexDirection: 'column',
@@ -139,12 +139,14 @@ const AboutPage = () => {
 
   const cardHeadingStyle = {
     fontSize: isMobile ? '1.8rem' : '2rem',
-    margin: '10px 0'
+    margin: '10px 0',
+    color:'#febb12'
   };
   
 
   const cardTextStyle = {
-    fontSize: isMobile ? '1.2rem' : '1.5rem'
+    fontSize: isMobile ? '1.6rem' : '1.5rem',
+    color:'#FDD788'
   };
 
   const backHeadingHiddenStyle = {
@@ -160,9 +162,9 @@ const AboutPage = () => {
     },
     { 
       title: 'One-on-One Mentorship', 
-      text: 'At Stock Archery, we believe in the power of personalized guidance.',
+      text: 'Stock Archery offers personalized mentorship, empowering you with tailored guidance and support for success',
       image: './images/2nd.jpeg',
-      backText: 'Our one-on-one mentorship program is designed to provide you with tailored support, helping you navigate the complexities of the stock market with confidence'
+      backText: 'Our one-on-one mentorship program is designed to provide you with tailored support, helping you navigate the complexities of the stock market with confidence.'
     },
     { 
       title: 'Doubt Clearing Sessions', 

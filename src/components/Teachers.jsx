@@ -121,7 +121,7 @@ const styles = {
   },
   teacherBio: {
     fontSize: '1.5rem',
-    color: '#febb12',
+    color: '#FDD788',
     lineHeight: '1.5',
     textAlign: 'justify',
   },

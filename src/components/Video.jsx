@@ -53,7 +53,7 @@ const TextContent = styled.div`
     }
 
   p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     
     text-align: justify;
     color:#FDD788;

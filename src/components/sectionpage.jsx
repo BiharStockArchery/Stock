@@ -69,6 +69,11 @@ const RoundImage = styled.img`
   height: 50%; /* Adjust size as needed */
   object-fit: cover;
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    width: 80%; /* Increase width on small screens */
+    height: auto; /* Adjust height to maintain aspect ratio */
+  }
 `;
 
 const Heading = styled.h2`
