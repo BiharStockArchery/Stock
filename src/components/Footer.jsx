@@ -57,7 +57,7 @@ const Footer = () => {
             <h3>Follow Us</h3>
             <div className="footer-social--icons">
               <a href="https://www.linkedin.com/company/stockarchery/" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faLinkedin} style={{ color: "#0077b5" }} className="icons" />
+                <FontAwesomeIcon icon={faLinkedin} beat style={{ color: "#0077b5" }} className="icons" />
               </a>
               
               <a href="https://www.instagram.com/stock.archery/?hl=en" target="_blank" rel="noopener noreferrer">
@@ -65,11 +65,11 @@ const Footer = () => {
               </a>
               
               <a href="https://www.youtube.com/@stock.archery" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faYoutube} style={{ color: "#ff0000" }} className="icons" />
+                <FontAwesomeIcon icon={faYoutube} beat style={{ color: "#ff0000" }} className="icons" />
               </a>
               
               <a href="https://x.com/stockarchery" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faTwitter} style={{ color: "#000000" }} className="icons" />
+                <FontAwesomeIcon icon={faTwitter} beat style={{ color: "#000000" }} className="icons" />
               </a>
               
             </div>
