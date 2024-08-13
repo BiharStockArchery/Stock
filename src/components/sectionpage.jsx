@@ -1,4 +1,3 @@
-// SectionsPage.jsx
 import React from 'react';
 import styled from 'styled-components';
 
@@ -13,9 +12,8 @@ const PageHeading = styled.h1`
   color: #febb12;
   margin-bottom: 40px; /* Add some space below the heading */
 
-  span{
-  color:#fff;
-  
+  span {
+    color: #fff;
   }
 `;
 
@@ -41,10 +39,10 @@ const Section = styled.div`
   &::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 8%; /* Adjust the starting point */
     right: 0;
     width: 1px; /* Thin vertical line */
-    height: 100%;
+    height: 90%; /* Reduce the height */
     background-color: #febb12;
     display: block;
   }
@@ -64,7 +62,7 @@ const Section = styled.div`
 `;
 
 const RoundImage = styled.img`
-  border-radius:20px;
+  border-radius: 20px;
   width: 50%; /* Adjust size as needed */
   height: 50%; /* Adjust size as needed */
   object-fit: cover;
@@ -85,7 +83,6 @@ const Heading = styled.h2`
 const Text = styled.p`
   font-size: 14px;
   color: #FDD788;
-  
 `;
 
 const HorizontalLine = styled.hr`
@@ -143,7 +140,6 @@ const SectionsPage = () => (
         heading={<><strong>Comprehensive Trading Experience</strong></>}
         text="A unique blend of theoretical knowledge and practical execution, ensuring well-rounded trading expertise."
       />
-     
     </Row>
   </Container>
 );
