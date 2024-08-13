@@ -57,19 +57,19 @@ const Footer = () => {
             <h3>Follow Us</h3>
             <div className="footer-social--icons">
               <a href="https://www.linkedin.com/company/stockarchery/" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faLinkedin} beat style={{ color: "#0077b5" }} className="icons" />
+                <FontAwesomeIcon icon={faLinkedin}  style={{ color: "#0077b5" }} className="icons" />
               </a>
               
               <a href="https://www.instagram.com/stock.archery/?hl=en" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faInstagram} beat style={{ color: "#e1306c" }} className="icons" />
+                <FontAwesomeIcon icon={faInstagram}  style={{ color: "#e1306c" }} className="icons" />
               </a>
-              
+      
               <a href="https://www.youtube.com/@stock.archery" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faYoutube} beat style={{ color: "#ff0000" }} className="icons" />
+                <FontAwesomeIcon icon={faYoutube}  style={{ color: "#ff0000" }} className="icons" />
               </a>
               
               <a href="https://x.com/stockarchery" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faTwitter} beat style={{ color: "#0077b5" }} className="icons" />
+                <FontAwesomeIcon icon={faTwitter}  style={{ color: "#0077b5" }} className="icons" />
               </a>
               
             </div>
