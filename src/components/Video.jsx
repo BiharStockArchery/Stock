@@ -75,7 +75,7 @@ const Video = () => {
         ></iframe>
       </VideoWrapper>
       <TextContent>
-        <strong><h2>Bihar's <span>First</span> Trading <span>Floor</span></h2></strong>
+        <b><h2>Bihar's <span>First</span> Trading <span>Floor</span></h2></b>
         <p>Experience Bihar’s premier stock market institute where education meets action. Our live trading classes allow students to learn and trade simultaneously in a real market setting. Gain hands-on experience, guided by expert mentors, and master strategies that work. Join us and elevate your trading skills with real-time practice.</p>
       </TextContent>
     </Container>

@@ -32,7 +32,7 @@ const Footer = () => {
         <div className="container grid grid-four-column">
           <div className="footer-about">
             <h3><span className="stock">Stock</span> <span className="archery">Archery</span></h3>
-            <a href="/about">
+            <a href="/">
               <p>Besides Babulal Sweets, Manik Sarkar Chowk, Adampur, Bhagalpur - 812001, Bihar.</p>
             </a>
           </div>
@@ -56,24 +56,28 @@ const Footer = () => {
           <div className="footer-social">
             <h3>Follow Us</h3>
             <div className="footer-social--icons">
+            <a href="https://www.linkedin.com/company/stockarchery/" target="_blank" rel="noopener noreferrer">
               <div>
                 <FaLinkedin className="icons" />
               </div>
-              <div>
+              </a>
+              
                 <a href="https://www.instagram.com/stock.archery/?hl=en" target="_blank" rel="noopener noreferrer">
+                <div>
                   <FaInstagram className="icons" />
-                </a>
+
               </div>
-              <div>
+              </a>
+              
                 <a href="https://www.youtube.com/@stock.archery" target="_blank" rel="noopener noreferrer">
-                  <FaYoutube className="icons" />
+                <div><FaYoutube className="icons" /></div>
                 </a>
-              </div>
-              <div>
+              
+             
                 <a href="https://x.com/stockarchery" target="_blank" rel="noopener noreferrer">
-                  <FaTwitter className="icons" />
+                <div><FaTwitter className="icons" /></div>
                 </a>
-              </div>
+              
             </div>
           </div>
 
