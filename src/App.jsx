@@ -17,6 +17,7 @@ import Content from './components/content';
 import Testimonials from './components/testimonial';
 import New from './components/new';
 import SectionsPage from './components/sectionpage';
+import Error from "./Error";
 
 
 const theme = {
@@ -59,6 +60,7 @@ const App = () => {
           <Route path="/testimonial" element ={<Testimonials/>}/>
           <Route path="New" element={<New/>}/>
           <Route path="sect" element={<SectionsPage/>}/>
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </BrowserRouter>

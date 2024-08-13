@@ -50,7 +50,7 @@ const AboutPage = () => {
   const titleStyle = {
     fontSize: isMobile ? '2.5rem' : '3rem',
     marginBottom: '20px',
-    color: '#9B870C'
+    color: '#febb12'
   };
 
   const paragraphStyle = {
