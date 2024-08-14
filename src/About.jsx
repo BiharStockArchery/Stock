@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import HeroSection from './components/HeroSection';
+
 import { useGlobalContext } from './context';
-import Teachers from './components/Teachers';
 import New from './components/new';
+import Teacher from './components/Teacher';
 
 const About = () => {
   const { updateAboutPage } = useGlobalContext();
@@ -14,7 +14,7 @@ const About = () => {
   return (
     <div>
      <New/>
-      <Teachers />
+      <Teacher/>
     </div>
   );
 };
