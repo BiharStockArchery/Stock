@@ -30,7 +30,7 @@ const TeamMembersWrapper = styled.div`
 const TeamMember = styled.div`
   position: relative;
   text-align: center;
-  width: 500px;
+  width: 550px;
   height: 550px;
   background-color: rgba(37, 37, 37, 1);
   border-radius: 10px;
@@ -44,6 +44,11 @@ const TeamMember = styled.div`
 
   @media (min-width: 768px) {
     width: 300px;
+  }
+
+  @media (max-width: 767px) {
+    width: 90%; /* Reduce the width of the card in mobile view */
+    margin: 0 auto; /* Center the card in mobile view */
   }
 `;
 
@@ -66,7 +71,7 @@ const NameOverlay = styled.div`
 `;
 
 const Role = styled.div`
-  background-color:rgba(37, 37, 37, 1);
+  background-color: rgba(37, 37, 37, 1);
   color: #febb12;
   padding: 10px 20px;
   border-radius: 5px;
@@ -81,19 +86,6 @@ const Bio = styled.p`
   color: #fdd788;
   padding: 10px 15px;
   text-align: justify;
-`;
-
-const FaLinkIcon = styled(FaLink)`
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  color: #febb12;
-  font-size: 24px;
-  cursor: pointer;
-  
-  &:hover {
-    color: #fff;
-  }
 `;
 
 const TeamDescription = styled.div`
@@ -141,27 +133,39 @@ const Description = styled.p`
   text-align: justify;
 `;
 
+const FaLinkIcon = styled(FaLink)`
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #febb12;
+  font-size: 24px;
+`;
+
 const TeamPage = () => {
   return (
     <Container>
       <TeamMembersWrapper>
         <TeamMember>
           <Image src="./images/2.png" alt="Prem Sandesh" />
-          <NameOverlay><span style={{ color: '#fff' }}>Prem</span> <span style={{ color: '#febb12' }}>Sandesh</span></NameOverlay>
+          <NameOverlay>
+            <span style={{ color: '#fff' }}>Prem</span> <span style={{ color: '#febb12' }}>Sandesh</span>
+          </NameOverlay>
           <Role>Exp:-8 Years</Role>
           <Bio>
-            With eight years of experience in price action trading and a specialization in swing trades, I have developed a profound understanding of market dynamics. 
+            With eight years of experience in price action trading and a specialization in swing trades, I have developed a profound understanding of market dynamics.
           </Bio>
-          <a href='https://www.linkedin.com/in/prem-sandesh-b29927289/'><FaLinkIcon /></a>
+          <FaLinkIcon />
         </TeamMember>
         <TeamMember>
           <Image src="./images/ankit.jpg" alt="Kumar Ankit" />
-          <NameOverlay><span style={{ color: '#fff' }}>Kumar</span> <span style={{ color: '#febb12' }}>Ankit</span></NameOverlay>
+          <NameOverlay>
+            <span style={{ color: '#fff' }}>Kumar</span> <span style={{ color: '#febb12' }}>Ankit</span>
+          </NameOverlay>
           <Role>Exp:-10 Years</Role>
           <Bio>
             Hello People. I am Kumar Ankit your mentor (Certified Researcher, Trader, and Financial Advisor) having market experience close to 10 years.
           </Bio>
-          <a href='https://www.linkedin.com/in/prem-sandesh-b29927289/'><FaLinkIcon /></a>
+          <FaLinkIcon />
         </TeamMember>
       </TeamMembersWrapper>
       <TeamDescription>
