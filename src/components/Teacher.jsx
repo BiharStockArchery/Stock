@@ -111,10 +111,11 @@ const TeamDescription = styled.div`
   }
 
   @media (max-width: 767px) {
-    padding-left: 15px;
+    padding-left: 0; /* Remove padding for mobile view */
+    text-align: center; /* Center the text in mobile view */
     
     &::before {
-      display: none;
+      display: none; /* Hide the vertical line on mobile view */
     }
   }
 `;
@@ -124,6 +125,10 @@ const Heading = styled.h2`
   font-weight: bold;
   margin-bottom: 20px;
   color: #febb12;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
 `;
 
 const Description = styled.p`
@@ -131,6 +136,12 @@ const Description = styled.p`
   color: #fdd788;
   line-height: 1.6;
   text-align: justify;
+  margin: 0 20px; /* Add margin for equal spacing on both sides */
+
+  @media (max-width: 767px) {
+    margin: 0 20px; /* Ensure equal spacing in mobile view */
+    /* Center the description in mobile view */
+  }
 `;
 
 const FaLinkIcon = styled(FaLink)`
