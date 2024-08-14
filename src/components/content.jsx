@@ -21,7 +21,6 @@ const AboutPage = () => {
     padding: '20px',
     backgroundColor: 'rgba(37, 37, 37, 1)',
     color: '#febb12',
-    
   };
 
   const headerStyle = {
@@ -31,7 +30,6 @@ const AboutPage = () => {
     marginBottom: '40px',
     textAlign: isMobile ? 'center' : 'left',
     gap: isMobile ? '20px' : '40px',
-    
   };
 
   const imageStyle = {
@@ -40,19 +38,24 @@ const AboutPage = () => {
     height: isMobile ? 'auto' : '400px',
     objectFit: 'cover',
     borderRadius: '10px',
-    marginBottom: isMobile ? '20px' : '0'
+    marginBottom: isMobile ? '20px' : '0',
   };
 
   const textContainerStyle = {
     marginTop: isMobile ? '20px' : '0',
     textAlign: isMobile ? 'center' : 'left',
-    flex: 1
+    flex: 1,
   };
 
   const titleStyle = {
     fontSize: isMobile ? '2.5rem' : '3rem',
     marginBottom: '20px',
-    color: '#febb12'
+    color: '#febb12',
+    fontWeight: 'bold',
+  };
+
+  const whiteTextStyle = {
+    color: '#fff', // White color
   };
 
   const paragraphStyle = {
@@ -60,14 +63,15 @@ const AboutPage = () => {
     lineHeight: '1.6',
     marginBottom: '15px',
     textAlign: 'justify',
-    color: '#FDD788'
+    color: '#FDD788',
   };
 
   const cardsHeaderStyle = {
     fontSize: isMobile ? '2.5rem' : '3rem',
     textAlign: 'center',
     marginBottom: '30px',
-    color: '#febb12'
+    color: '#febb12',
+    fontWeight: 'bold',
   };
 
   const cardsContainerStyle = {
@@ -76,7 +80,7 @@ const AboutPage = () => {
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     gap: '20px',
-    marginBottom:'30px'
+    marginBottom: '30px',
   };
 
   const cardContainerStyle = {
@@ -84,7 +88,7 @@ const AboutPage = () => {
     width: '100%',
     maxWidth: '300px',
     perspective: '1000px',
-    margin: '0 auto'
+    margin: '0 auto',
   };
 
   const flipCardInnerStyle = (isHovered) => ({
@@ -95,7 +99,7 @@ const AboutPage = () => {
     transformStyle: 'preserve-3d',
     borderRadius: '10px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-    transform: isHovered ? 'rotateY(180deg)' : 'rotateY(0deg)'
+    transform: isHovered ? 'rotateY(180deg)' : 'rotateY(0deg)',
   });
 
   const flipCardFrontStyle = {
@@ -112,7 +116,7 @@ const AboutPage = () => {
     padding: '20px',
     boxSizing: 'border-box',
     borderRadius: '10px',
-    overflow: 'hidden'
+    overflow: 'hidden',
   };
 
   const flipCardBackStyle = {
@@ -130,80 +134,77 @@ const AboutPage = () => {
     boxSizing: 'border-box',
     transform: 'rotateY(180deg)',
     borderRadius: '10px',
-    overflow: 'hidden'
+    overflow: 'hidden',
   };
 
   const cardImageStyle = {
     width: '100%',
     height: '200px',
     objectFit: 'cover',
-    borderRadius: '10px'
+    borderRadius: '10px',
   };
 
   const cardHeadingStyle = {
     fontSize: isMobile ? '1.8rem' : '2rem',
     margin: '10px 0',
-    color:'#febb12'
+    color: '#febb12',
+    fontWeight: 'bold',
   };
-  
 
   const cardTextStyle = {
     fontSize: isMobile ? '1.6rem' : '1.5rem',
-    color:'#FDD788'
+    color: '#FDD788',
   };
 
   const backHeadingHiddenStyle = {
-    display: 'none'
+    display: 'none',
   };
 
   const cardData = [
-    { 
-      title: 'Live Market Sessions', 
+    {
+      title: 'Live Market Sessions',
       text: 'Our trading floor, the first of its kind in Bihar, offers a unique opportunity to learn and trade during live market.',
       image: './images/1st.jpeg',
-      backText: 'Join our live market sessions to gain real-time trading experience and insights from industry experts.'
+      backText: 'Join our live market sessions to gain real-time trading experience and insights from industry experts.',
     },
-    { 
-      title: 'One-on-One Mentorship', 
+    {
+      title: 'One-on-One Mentorship',
       text: 'Stock Archery offers personalized mentorship, empowering you with tailored guidance and support for success',
       image: './images/2nd.jpeg',
-      backText: 'Our one-on-one mentorship program is designed to provide you with tailored support, helping you navigate the complexities of the stock market with confidence.'
+      backText: 'Our one-on-one mentorship program is designed to provide you with tailored support, helping you navigate the complexities of the stock market with confidence.',
     },
-    { 
-      title: 'Doubt Clearing Sessions', 
+    {
+      title: 'Doubt Clearing Sessions',
       text: 'We are dedicated to sustainable practices that protect the environment and promote a healthier future.',
       image: './images/3rd.jpeg',
-      backText: 'Clear your doubts with in-depth sessions focused on addressing your specific trading challenges.'
+      backText: 'Clear your doubts with in-depth sessions focused on addressing your specific trading challenges.',
     },
-    { 
-      title: '1 Year Handhold Support', 
+    {
+      title: '1 Year Handhold Support',
       text: 'We actively engage with and support our local communities through various initiatives and partnerships.',
       image: './images/4th.jpeg',
-      backText: 'Enjoy a full year of support, ensuring you stay on track with your trading goals and progress.'
-    }
+      backText: 'Enjoy a full year of support, ensuring you stay on track with your trading goals and progress.',
+    },
   ];
 
   return (
-    
     <div style={containerStyle}>
       <div style={headerStyle}>
-        <img
-          src="./images/about1.svg"
-          alt="About Us"
-          style={imageStyle}
-        />
+        <img src="./images/about1.svg" alt="About Us" style={imageStyle} />
         <div style={textContainerStyle}>
-        
-          <h1 style={titleStyle}>ABOUT US</h1>
-          
+          <h1 style={titleStyle}>
+            <span style={whiteTextStyle}>ABOUT</span> US
+          </h1>
           <p style={paragraphStyle}>
             Stock Archery is a premier trading floor and educational hub located in Bihar, specializing in hands-on trading education during live market sessions. As the first of its kind in the region, Stock Archery empowers traders with practical skills and real-time market experience. Our seasoned experts provide comprehensive training, guiding students through every step of the trading process. At Stock Archery, we believe in learning by doing. Our unique approach allows students to trade alongside professionals, offering an immersive experience that bridges the gap between theory and practice. Whether you're a novice trader or looking to sharpen your skills, Stock Archery provides tailored classes designed to meet your needs.
           </p>
         </div>
       </div>
-    
-      <h1 style={cardsHeaderStyle}>What We Offer</h1>
-    
+
+      <h1 style={cardsHeaderStyle}>
+        <span style={whiteTextStyle}>Our</span> Services
+      </h1>
+
       <div style={cardsContainerStyle}>
         {cardData.map((card, i) => (
           <div
@@ -214,19 +215,15 @@ const AboutPage = () => {
           >
             <div style={flipCardInnerStyle(hoveredCard === i)}>
               <div style={flipCardFrontStyle}>
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  style={cardImageStyle}
-                />
-                <strong><h2 style={cardHeadingStyle}>{card.title}</h2></strong>
+                <img src={card.image} alt={card.title} style={cardImageStyle} />
+                <strong>
+                  <h2 style={cardHeadingStyle}>{card.title}</h2>
+                </strong>
                 <p style={cardTextStyle}>{card.text}</p>
               </div>
               <div style={flipCardBackStyle}>
                 <h2 style={backHeadingHiddenStyle}>{card.title}</h2>
-                <p style={cardTextStyle}>
-                  {card.backText}
-                </p>
+                <p style={cardTextStyle}>{card.backText}</p>
               </div>
             </div>
           </div>

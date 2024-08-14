@@ -165,7 +165,7 @@ const TeamPage = () => {
           <Bio>
             With eight years of experience in price action trading and a specialization in swing trades, I have developed a profound understanding of market dynamics.
           </Bio>
-          <FaLinkIcon />
+          <a href='https://www.linkedin.com/in/prem-sandesh-b29927289/'><FaLinkIcon /></a>
         </TeamMember>
         <TeamMember>
           <Image src="./images/ankit.jpg" alt="Kumar Ankit" />
