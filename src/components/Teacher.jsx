@@ -30,7 +30,7 @@ const TeamMembersWrapper = styled.div`
 const TeamMember = styled.div`
   position: relative;
   text-align: center;
-  width: 550px;
+  width: 500px;
   height: 550px;
   background-color: rgba(37, 37, 37, 1);
   border-radius: 10px;
