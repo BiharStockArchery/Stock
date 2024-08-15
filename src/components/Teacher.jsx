@@ -1,194 +1,162 @@
-import React from 'react';
-import styled from 'styled-components';
-import { FaLink } from 'react-icons/fa';
+import React from "react";
+import styled from "styled-components";
+import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
-const Container = styled.div`
+const TeachersContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 40px 20px;
-  background-color: rgba(37, 37, 37, 1);
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    align-items: flex-start;
-  }
+  padding: 40px;
+  background-color: #252525;
+  gap: 40px;
 `;
 
-const TeamMembersWrapper = styled.div`
+const TeacherRow = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    gap: 20px;
-  }
-`;
-
-const TeamMember = styled.div`
-  position: relative;
-  text-align: center;
-  width: 550px;
-  height: 550px;
-  background-color: rgba(37, 37, 37, 1);
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  align-items: flex-start;
+  padding: 30px;
+  background-color: #252525;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
   }
 
-  @media (min-width: 768px) {
-    width: 300px;
-  }
-
-  @media (max-width: 767px) {
-    width: 90%; /* Reduce the width of the card in mobile view */
-    margin: 0 auto; /* Center the card in mobile view */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
-const Image = styled.img`
-  width: 100%;
-  height: 60%;
-  display: block;
+const TeacherImage = styled.img`
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-right: 30px;
+  border: 6px solid #4a90e2;
+  transition: transform 0.3s ease;
+
+  ${TeacherRow}:hover & {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 `;
 
-const NameOverlay = styled.div`
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(37, 37, 37, 1);
-  color: #fdd788;
-  padding: 15px 0;
+const TeacherInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   text-align: center;
-  font-size: 18px;
-  font-weight: bold;
+
+  @media (min-width: 769px) {
+    text-align: left;
+  }
 `;
 
-const Role = styled.div`
-  background-color: rgba(37, 37, 37, 1);
+const TeacherName = styled.h2`
+  font-size: 1.8rem;
+  margin: 0;
   color: #febb12;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin: 10px auto;
-  width: fit-content;
   font-weight: bold;
-  font-size: 18px;
 `;
 
-const Bio = styled.p`
-  font-size: 14px;
-  color: #fdd788;
-  padding: 10px 15px;
-  text-align: justify;
-`;
-
-const TeamDescription = styled.div`
-  position: relative;
-  max-width: 600px;
-  margin-top: 40px;
-  padding-left: 30px;
-  border-left: 2px solid transparent;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0.5px;
-    background-color: #febb12;
-  }
-
-  @media (min-width: 768px) {
-    margin-top: 0;
-    margin-left: 100px;
-  }
-
-  @media (max-width: 767px) {
-    padding-left: 0; /* Remove padding for mobile view */
-    text-align: center; /* Center the text in mobile view */
-    
-    &::before {
-      display: none; /* Hide the vertical line on mobile view */
-    }
-  }
-`;
-
-const Heading = styled.h2`
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20px;
+const TeacherSubject = styled.h4`
+  font-size: 2rem;
+  margin: 5px 0;
   color: #febb12;
-
-  @media (max-width: 767px) {
-    text-align: center;
-  }
+  font-weight: 2000;
 `;
 
-const Description = styled.p`
-  font-size: 16px;
+const TeacherBio = styled.p`
+  font-size: 1.5rem;
   color: #fdd788;
+  margin: 10px 0;
   line-height: 1.6;
-  text-align: justify;
-  margin: 0 20px; /* Add margin for equal spacing on both sides */
+  max-width: 1500px;
+`;
 
-  @media (max-width: 767px) {
-    margin: 0 20px; /* Ensure equal spacing in mobile view */
-    /* Center the description in mobile view */
+const SocialLinks = styled.div`
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+`;
+
+const SocialLink = styled.a`
+  color: #febb12;
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    color: #8ebbf2;
+    transform: scale(1.1);
   }
 `;
 
-const FaLinkIcon = styled(FaLink)`
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: #febb12;
-  font-size: 24px;
-`;
-
-const TeamPage = () => {
+const Teacher = ({ name, subject, bio, image, linkedin, twitter, instagram }) => {
   return (
-    <Container>
-      <TeamMembersWrapper>
-        <TeamMember>
-          <Image src="./images/2.png" alt="Prem Sandesh" />
-          <NameOverlay>
-            <span style={{ color: '#fff' }}>Prem</span> <span style={{ color: '#febb12' }}>Sandesh</span>
-          </NameOverlay>
-          <Role>Exp:-8 Years</Role>
-          <Bio>
-            With eight years of experience in price action trading and a specialization in swing trades, I have developed a profound understanding of market dynamics.
-          </Bio>
-          <a href='https://www.linkedin.com/in/prem-sandesh-b29927289/'><FaLinkIcon /></a>
-        </TeamMember>
-        <TeamMember>
-          <Image src="./images/ankit.jpg" alt="Kumar Ankit" />
-          <NameOverlay>
-            <span style={{ color: '#fff' }}>Kumar</span> <span style={{ color: '#febb12' }}>Ankit</span>
-          </NameOverlay>
-          <Role>Exp:-10 Years</Role>
-          <Bio>
-            Hello People. I am Kumar Ankit your mentor (Certified Researcher, Trader, and Financial Advisor) having market experience close to 10 years.
-          </Bio>
-          <FaLinkIcon />
-        </TeamMember>
-      </TeamMembersWrapper>
-      <TeamDescription>
-        <Heading>
-          <span style={{ color: '#fff' }}>Meet</span> <span style={{ color: '#febb12' }}>Our</span><span style={{ color: '#fff' }}> Team</span>
-        </Heading>
-        <Description>
-          The team at Stock Archery is composed of seasoned experts dedicated to empowering individuals in the stock market. Our skilled professionals bring a wealth of experience in stock trading, financial analysis, and market strategy. Each member of our team is committed to providing personalized mentorship and high-quality education to help clients navigate the complexities of the stock market. With backgrounds in successful trading and financial management, our team ensures that you receive top-notch guidance and insights. At Stock Archery, we are passionate about delivering results and fostering growth, making us your trusted partner for mastering stock trading and achieving financial success.
-        </Description>
-      </TeamDescription>
-    </Container>
+    <TeacherRow>
+      <TeacherImage src={image} alt={`${name}'s portrait`} />
+      <TeacherInfo>
+        <TeacherName>{name}</TeacherName>
+        <TeacherSubject>{subject}</TeacherSubject>
+        <TeacherBio>{bio}</TeacherBio>
+        <SocialLinks>
+          {linkedin && (
+            <SocialLink href={linkedin} target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
+            </SocialLink>
+          )}
+          {twitter && (
+            <SocialLink href={twitter} target="_blank" rel="noopener noreferrer">
+              <FaTwitter />
+            </SocialLink>
+          )}
+          {instagram && (
+            <SocialLink href={instagram} target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </SocialLink>
+          )}
+        </SocialLinks>
+      </TeacherInfo>
+    </TeacherRow>
   );
 };
 
-export default TeamPage;
+const TeachersList = () => {
+  const teachers = [
+    {
+      
+      subject: "Prem Sandesh",
+      bio: "With eight years of experience in price action trading and a specialization in swing trades, I've developed a deep understanding of market dynamics. My passion is to share insights and empower aspiring traders with the knowledge and skills needed for confident and profitable market navigation.",
+      image: "./images/prem.jpg",
+      linkedin: "https://www.linkedin.com/in/janedoe",
+      twitter: "https://twitter.com/janedoe",
+      instagram: "https://instagram.com/janedoe",
+    },
+    {
+      
+      subject: "Kumar Ankit",
+      bio: "Hello People. I am Kumar Ankit your mentor (Certified Researcher, Trader, and Financial Advisor) having market experience close to 10 years. My experience says that mastering one setup is enough for a person to become successful in stock market. I will make sure to help you find that one setup. See you soon.",
+      image: "./images/ankit.jpg",
+      linkedin: "https://www.linkedin.com/in/johnsmith",
+      twitter: "https://twitter.com/johnsmith",
+      instagram: "https://instagram.com/johnsmith",
+    },
+  ];
+
+  return (
+    <TeachersContainer>
+      {teachers.map((teacher, index) => (
+        <Teacher key={index} {...teacher} />
+      ))}
+    </TeachersContainer>
+  );
+};
+
+export default TeachersList;
