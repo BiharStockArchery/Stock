@@ -140,6 +140,11 @@ const SectionsPage = () => (
         heading={<><strong>Comprehensive Trading Experience</strong></>}
         text="A unique blend of theoretical knowledge and practical execution, ensuring well-rounded trading expertise."
       />
+       <SectionComponent
+        image="./images/in.jpeg"
+        heading={<><strong>Interactive Learning Enviroment</strong></>}
+        text=" Engage in an energetic and collaborative setting where real-time discussions and peer interactions enhance the learning experience."
+      />
     </Row>
   </Container>
 );
