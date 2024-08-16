@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { GlobalStyle } from "./GlobalStyle";
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { GlobalStyle } from './GlobalStyle';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './Home';
@@ -17,8 +17,6 @@ import Content from './components/content';
 import Testimonials from './components/testimonial';
 import New from './components/new';
 import SectionsPage from './components/sectionpage';
-import Error from "./Error";
-
 
 const theme = {
   colors: {
@@ -44,7 +42,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-     <WhatsAppButton/>
+      <WhatsAppButton />
       <BrowserRouter>
         <Header />
         <Routes>
@@ -55,12 +53,12 @@ const App = () => {
           <Route path="/review" element={<Review />} />
           <Route path="/video" element={<Video />} />
           <Route path="/FAQ" element={<FAQ />} />
-          <Route path="/Prospectus" element={<Prospectus/>} />
-          <Route path="/content" element ={<Content/>}/>
-          <Route path="/testimonial" element ={<Testimonials/>}/>
-          <Route path="New" element={<New/>}/>
-          <Route path="sect" element={<SectionsPage/>}/>
-          <Route path="*" element={<Error />} />
+          <Route path="/Prospectus" element={<Prospectus />} />
+          <Route path="/content" element={<Content />} />
+          <Route path="/testimonial" element={<Testimonials />} />
+          <Route path="/new" element={<New />} />
+          <Route path="/sect" element={<SectionsPage />} />
+          <Route path="*" element={<Navigate to="/" />} /> {/* Redirect to home page for all undefined routes */}
         </Routes>
         <Footer />
       </BrowserRouter>
