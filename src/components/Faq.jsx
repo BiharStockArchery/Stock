@@ -66,7 +66,7 @@ const Answer = styled.div`
   padding: ${({ isOpen }) => (isOpen ? '10px 0' : '0')};
   font-size: 1.9rem; /* Larger font size for better readability */
   background-color: #252525;
-  color: #febb12;
+  color: #fff;
   
 `;
 
@@ -91,11 +91,11 @@ const FAQ = () => {
   const faqs = [
     {
       question: 'Whom is this training suitable for ?',
-      answer: 'This training lays a foundation of basic concepts of capital markets, which shall equip the students with both theoretical and practical know-how of the subject. We suggest that the students should have a minimum qualification from Higher Secondary School, i.e., class 12.'
+      answer: 'This capital markets training is perfect for individuals with a Higher Secondary School education (Class 12) who want to build a strong foundation in financial markets. It offers a blend of theoretical and practical knowledge, making it ideal for students and aspiring finance professionals looking to enhance their understanding of market dynamics, investment strategies, and financial analysis.'
     },
     {
       question: ' Is laptop mandatory to attend the training ?',
-      answer: 'No. But its better if you have one.'
+      answer: 'No, a laptop is not mandatory to attend our capital markets training. However, having a laptop is highly recommended as it enhances your learning experience.'
     },
     {
       question: 'Do i need to pay entire fees at once ?',
@@ -115,11 +115,11 @@ const FAQ = () => {
     },
     {
       question: 'What is Stock Market?',
-      answer: 'The stock market is a platform where shares of publicly listed companies are traded.'
+      answer: 'The stock market is a financial marketplace where investors buy and sell shares of publicly traded companies. It provides a platform for trading equity securities, such as stocks and bonds, allowing companies to raise capital and investors to potentially earn returns through dividends and capital gains. '
     },
     {
       question: 'Course Benefits and Future Opportunities',
-      answer: 'Our course provides knowledge, skills, and opportunities to excel in the stock market and achieve financial goals.'
+      answer: 'Our comprehensive stock market course delivers essential knowledge, practical skills, and valuable opportunities to excel in the financial markets and achieve your financial goals. This training equips you with in-depth insights into stock trading, investment strategies, and market analysis, empowering you to make informed decisions and maximize your returns.'
     }
   ];
 
