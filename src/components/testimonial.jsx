@@ -135,6 +135,7 @@ const StudentReviews = () => {
 
             h1 {
               font-size: 2.5rem;
+             
             }
           }
 
@@ -144,6 +145,7 @@ const StudentReviews = () => {
             }
 
             h1 {
+              
               font-size: 2.5rem;
             }
           }
