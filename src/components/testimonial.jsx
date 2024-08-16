@@ -107,12 +107,12 @@ const StudentReviews = () => {
 
           .review-card h2 {
             margin-top: 0;
-            font-size: 1.5rem;
+            font-size: 2rem;
             color: #febb12;
           }
 
           .review-card p {
-            font-size: 1rem;
+            font-size: 1.5rem;
             color: #FDD788;
           }
 
@@ -134,7 +134,7 @@ const StudentReviews = () => {
             }
 
             h1 {
-              font-size: 1.5rem;
+              font-size: 2.5rem;
             }
           }
 
