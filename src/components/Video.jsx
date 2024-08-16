@@ -21,6 +21,8 @@ const VideoWrapper = styled.div`
   border: 2px solid #000000;
   border-radius: 10px;
   padding: 10px;
+  margin-bottom: 10px;
+  
 
   iframe {
     width: 100%;
@@ -55,7 +57,7 @@ const TextContent = styled.div`
     font-size: 2rem;
     text-align: justify;
     color: #FDD788;
-    margin: 0; /* Remove margin */
+   margin: 40px 0 0; 
     padding: 0; /* Remove padding */
   }
 

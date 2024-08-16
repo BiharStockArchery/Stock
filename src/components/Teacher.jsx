@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const TeachersContainer = styled.div`
   display: flex;
@@ -8,6 +9,17 @@ const TeachersContainer = styled.div`
   padding: 40px;
   background-color: #252525;
   gap: 40px;
+`;
+
+const Heading = styled.h1`
+  color: #febb12;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+
+  & span {
+    color: #ffffff;
+  }
 `;
 
 const TeacherRow = styled.div`
@@ -88,7 +100,6 @@ const SocialLinks = styled.div`
 `;
 
 const SocialLink = styled.a`
-  color: #febb12;
   font-size: 1.8rem;
   transition: color 0.3s ease, transform 0.3s ease;
 
@@ -109,17 +120,17 @@ const Teacher = ({ name, subject, bio, image, linkedin, twitter, instagram }) =>
         <SocialLinks>
           {linkedin && (
             <SocialLink href={linkedin} target="_blank" rel="noopener noreferrer">
-              <FaLinkedin />
+              <FontAwesomeIcon icon={faLinkedin} style={{ color: "#0077b5" }} />
             </SocialLink>
           )}
           {twitter && (
             <SocialLink href={twitter} target="_blank" rel="noopener noreferrer">
-              <FaTwitter />
+              <FontAwesomeIcon icon={faTwitter} style={{ color: "#000000" }} />
             </SocialLink>
           )}
           {instagram && (
             <SocialLink href={instagram} target="_blank" rel="noopener noreferrer">
-              <FaInstagram />
+              <FontAwesomeIcon icon={faInstagram} style={{ color: "#e1306c" }} />
             </SocialLink>
           )}
         </SocialLinks>
@@ -131,27 +142,28 @@ const Teacher = ({ name, subject, bio, image, linkedin, twitter, instagram }) =>
 const TeachersList = () => {
   const teachers = [
     {
-      
       subject: "Prem Sandesh",
       bio: "With eight years of experience in price action trading and a specialization in swing trades, I've developed a deep understanding of market dynamics. My passion is to share insights and empower aspiring traders with the knowledge and skills needed for confident and profitable market navigation.",
       image: "./images/prem.jpg",
-      linkedin: "https://www.linkedin.com/in/janedoe",
-      twitter: "https://twitter.com/janedoe",
-      instagram: "https://instagram.com/janedoe",
+      linkedin: "https://www.linkedin.com/in/prem-sandesh-b29927289/",
+      twitter: "https://x.com/stockarchery",
+      instagram: "https://www.instagram.com/stock.archery/",
     },
     {
-      
       subject: "Kumar Ankit",
       bio: "Hello People. I am Kumar Ankit your mentor (Certified Researcher, Trader, and Financial Advisor) having market experience close to 10 years. My experience says that mastering one setup is enough for a person to become successful in stock market. I will make sure to help you find that one setup. See you soon.",
       image: "./images/ankit.jpg",
-      linkedin: "https://www.linkedin.com/in/johnsmith",
-      twitter: "https://twitter.com/johnsmith",
-      instagram: "https://instagram.com/johnsmith",
+      linkedin: "https://www.linkedin.com/in/kumar-ankit-964823323/",
+      twitter: "https://x.com/stockarchery",
+      instagram: "https://www.instagram.com/stock.archery/",
     },
   ];
 
   return (
     <TeachersContainer>
+      <Heading>
+        <span>Meet</span> Our Mentors
+      </Heading>
       {teachers.map((teacher, index) => (
         <Teacher key={index} {...teacher} />
       ))}
