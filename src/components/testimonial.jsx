@@ -74,7 +74,7 @@ const StudentReviews = () => {
           h1 {
             text-align: center;
             margin-bottom: 20px;
-            font-size: 4rem;
+            font-size: 3rem;
             color: #fff;
           }
 
