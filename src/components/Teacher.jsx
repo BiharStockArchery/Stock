@@ -143,7 +143,7 @@ const TeachersList = () => {
   const teachers = [
     {
       subject: "Prem Sandesh",
-      bio: "With eight years of experience in price action trading and a specialization in swing trades, I've developed a deep understanding of market dynamics. My passion is to share insights and empower aspiring traders with the knowledge and skills needed for confident and profitable market navigation.",
+      bio: "With over eight years of experience in price action trading and a specialization in swing trades, I offer unparalleled expertise in market dynamics. My mission is to equip aspiring traders with essential insights and skills for confident, profitable market navigation. Discover comprehensive strategies and practical techniques tailored for success. Join me to enhance your trading skills and achieve remarkable results in the ever-evolving financial markets.",
       image: "./images/prem.jpg",
       linkedin: "https://www.linkedin.com/in/prem-sandesh-b29927289/",
       twitter: "https://x.com/stockarchery",
@@ -151,7 +151,7 @@ const TeachersList = () => {
     },
     {
       subject: "Kumar Ankit",
-      bio: "Hello People. I am Kumar Ankit your mentor (Certified Researcher, Trader, and Financial Advisor) having market experience close to 10 years. My experience says that mastering one setup is enough for a person to become successful in stock market. I will make sure to help you find that one setup. See you soon.",
+      bio: "Hello, I'm Kumar Ankit, your dedicated mentor—Certified Researcher, Trader, and Financial Advisor with nearly a decade of market experience. With my extensive expertise, I emphasize that mastering a single trading setup can lead to significant success in the stock market. My mission is to guide you in discovering that pivotal setup, ensuring you have the tools and knowledge needed to excel. Join me to unlock your trading potential and achieve financial success with proven strategies and personalized support. See you soon on your path to market mastery!",
       image: "./images/ankit.jpg",
       linkedin: "https://www.linkedin.com/in/kumar-ankit-964823323/",
       twitter: "https://x.com/stockarchery",

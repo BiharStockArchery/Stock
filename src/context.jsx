@@ -21,7 +21,7 @@ const AppProvider = ({ children }) => {
       payload: {
         name: "STOCK ARCHERY",
         image: "./images/h44.png",
-        paragraph: "Welcome to Stock Archery, your ultimate destination for Trading knowledge and Success.",
+        paragraph: "Welcome to Stock Archery, your premier source for expert trading knowledge and strategies. Achieve trading success with our in-depth resources, tips, and insights tailored for savvy investors. Start mastering the market today",
       },
     });
   };
@@ -32,7 +32,7 @@ const AppProvider = ({ children }) => {
       payload: {
         name: "Bihar's First Trading Floor",
         image: "./images/about1.svg",
-        paragraph: "First of its kind, we offer live trading classes where students can learn and trade in real-time. This unique approach combines education with practical trading experience, providing a hands-on learning environment.",
+        paragraph: "Introducing Stock Archery's  live trading classes—where education meets real-time trading. Gain hands-on experience and practical skills in our interactive sessions. Elevate your trading expertise with our unique, live-learning approach. Join now and experience the future of trading education",
       },
     });
   };
