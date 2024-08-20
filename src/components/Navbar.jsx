@@ -7,63 +7,82 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <Nav>
+    <Nav role="navigation" aria-label="Main Navigation">
       <div className="menuIcon">
-        <div className="mobile-navbar-btn">
+        <div
+          className="mobile-navbar-btn"
+          aria-label={openMenu ? "Close menu" : "Open menu"}
+          aria-expanded={openMenu}
+          onClick={() => setOpenMenu(!openMenu)}
+        >
           {openMenu ? (
             <CgCloseR
               className="mobile-nav-icon close-icon"
-              onClick={() => setOpenMenu(false)}
+              aria-hidden="true"
             />
           ) : (
             <CgMenu
               className="mobile-nav-icon"
-              onClick={() => setOpenMenu(true)}
+              aria-hidden="true"
             />
           )}
         </div>
-        <ul className={`navbar-list ${openMenu ? 'active' : ''}`}>
-          <li>
+        <ul className={`navbar-list ${openMenu ? 'active' : ''}`} role="menubar">
+          <li role="none">
             <NavLink
               className="navbar-link"
               onClick={() => setOpenMenu(false)}
-              to="/">
+              to="/"
+              role="menuitem"
+              aria-label="Home"
+            >
               Home
             </NavLink>
           </li>
-          <li>
+          <li role="none">
             <NavLink
               className="navbar-link"
               onClick={() => setOpenMenu(false)}
-              to="/about">
+              to="/about"
+              role="menuitem"
+              aria-label="About Us"
+            >
               About
             </NavLink>
           </li>
-          <li>
+          <li role="none">
             <NavLink
               className="navbar-link"
               onClick={() => setOpenMenu(false)}
-              to="/testimonial">
+              to="/testimonial"
+              role="menuitem"
+              aria-label="Testimonials"
+            >
               Testimonials
             </NavLink>
           </li>
-          <li>
+          <li role="none">
             <NavLink
               className="navbar-link"
               onClick={() => setOpenMenu(false)}
-              to="/contact">
+              to="/contact"
+              role="menuitem"
+              aria-label="Contact Us"
+            >
               Contact
             </NavLink>
           </li>
-          <li>
+          <li role="none">
             <NavLink
               className="navbar-link"
               onClick={() => setOpenMenu(false)}
-              to="/FAQ">
+              to="/FAQ"
+              role="menuitem"
+              aria-label="Frequently Asked Questions"
+            >
               FAQ
             </NavLink>
           </li>
-        
         </ul>
       </div>
     </Nav>

@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles/Button";
 import { useGlobalContext } from "../context";
@@ -11,28 +10,28 @@ const HeroSection = () => {
   return (
     <Wrapper>
       <div className="container grid grid-two-column">
-        <div className="section-hero-data">
-          <h1 className="hero-heading">
+        <div className="section-hero-data" role="banner" aria-labelledby="hero-heading">
+          <h1 id="hero-heading" className="hero-heading">
             <span className="stock">Stock</span> <span className="archery">Archery</span>
           </h1>
           <p className="hero-para">{paragraph}</p>
           <Link
-              to="sections-page" // The target section ID
-              smooth={true}
-              duration={500}
-            >
-          <Button className="btn hireme-btn">
-        
+            to="sections-page" // The target section ID
+            smooth={true}
+            duration={500}
+            aria-label="Learn more about our services"
+          >
+            <Button className="btn hireme-btn">
               Know more
-          </Button>
-            </Link>
-         
+            </Button>
+          </Link>
         </div>
 
-        <div className="section-hero-image">
+        <div className="section-hero-image" role="figure" aria-labelledby="hero-image-caption">
           <picture>
-            <img src={image} alt="hero gif" className="hero-img" />
+            <img src={image} alt="Hero illustration showing archery" className="hero-img" />
           </picture>
+          <figcaption id="hero-image-caption" className="sr-only">Hero illustration showing archery equipment and practice.</figcaption>
         </div>
       </div>
     </Wrapper>

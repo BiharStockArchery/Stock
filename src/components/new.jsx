@@ -16,15 +16,22 @@ const New = () => {
           </h1>
           <p className="hero-para">{paragraph}</p>
          
-            <NavLink to="/content"> 
+          <NavLink 
+            to="/content" 
+            aria-label="Learn more about Stock Archery"
+          >
             <Button className="btn hireme-btn">Know more</Button>
-            </NavLink>
+          </NavLink>
           
         </div>
 
         <div className="section-hero-image">
           <picture>
-            <img src={image} alt="hero gif" className="hero-img" />
+            <img 
+              src={image} 
+              alt="Stock Archery promotional image" 
+              className="hero-img" 
+            />
           </picture>
         </div>
       </div>

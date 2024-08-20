@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa'; // Importing icons
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 
 // Container for the whole page
 const PageContainer = styled.div`
@@ -67,7 +68,6 @@ const Answer = styled.div`
   font-size: 1.9rem; /* Larger font size for better readability */
   background-color: #252525;
   color: #fff;
-  
 `;
 
 // Style for the dropdown arrow
@@ -94,28 +94,28 @@ const FAQ = () => {
       answer: 'This capital markets training is perfect for individuals with a Higher Secondary School education (Class 12) who want to build a strong foundation in financial markets. It offers a blend of theoretical and practical knowledge, making it ideal for students and aspiring finance professionals looking to enhance their understanding of market dynamics, investment strategies, and financial analysis.'
     },
     {
-      question: ' Is laptop mandatory to attend the training ?',
+      question: 'Is laptop mandatory to attend the training ?',
       answer: 'No, a laptop is not mandatory to attend our capital markets training. However, having a laptop is highly recommended as it enhances your learning experience.'
     },
     {
-      question: 'Do i need to pay entire fees at once ?',
-      answer: 'Yes you need to pay entire fees at once.'
+      question: 'Do I need to pay entire fees at once ?',
+      answer: 'Yes, you need to pay the entire fees at once.'
     },
     {
       question: 'How long will this training last ?',
-      answer: 'The training duration is of 2 months, except weekends with one year of handholding support.'
+      answer: 'The training duration is 2 months, excluding weekends, with one year of handholding support.'
     },
     {
       question: 'Will I be able to trade independently after this training ends ?',
       answer: 'Absolutely Yes, many individuals successfully pursue trading as a full-time career after this course.'
     },
     {
-      question: ' Will I receive a certificate after course completion ?',
-      answer: 'Yes, you will receive a certificate of participation .'
+      question: 'Will I receive a certificate after course completion ?',
+      answer: 'Yes, you will receive a certificate of participation.'
     },
     {
-      question: 'What is Stock Market?',
-      answer: 'The stock market is a financial marketplace where investors buy and sell shares of publicly traded companies. It provides a platform for trading equity securities, such as stocks and bonds, allowing companies to raise capital and investors to potentially earn returns through dividends and capital gains. '
+      question: 'What is the Stock Market?',
+      answer: 'The stock market is a financial marketplace where investors buy and sell shares of publicly traded companies. It provides a platform for trading equity securities, such as stocks and bonds, allowing companies to raise capital and investors to potentially earn returns through dividends and capital gains.'
     },
     {
       question: 'Course Benefits and Future Opportunities',
@@ -125,17 +125,36 @@ const FAQ = () => {
 
   return (
     <PageContainer>
+      <Helmet>
+        <title>Frequently Asked Questions | Stock Archery</title>
+        <meta name="description" content="Find answers to common questions about our capital markets training, including suitability, laptop requirements, fees, training duration, certification, and more." />
+        <meta name="keywords" content="FAQ, capital markets training, Stock Archery, trading education, financial markets, trading course, stock market questions" />
+        <meta property="og:title" content="Frequently Asked Questions | Stock Archery" />
+        <meta property="og:description" content="Find answers to common questions about our capital markets training, including suitability, laptop requirements, fees, training duration, certification, and more." />
+        <meta property="og:image" content="./images/faq-image.svg" />
+        <meta property="og:url" content="https://www.stockarchery.com/faq" />
+      </Helmet>
+
       <Heading>Frequently Asked Questions</Heading>
       <FAQContainer>
         {faqs.map((faq, index) => (
-          <FAQItem key={index} onClick={() => toggleAnswer(index)}>
+          <FAQItem
+            key={index}
+            onClick={() => toggleAnswer(index)}
+            role="button"
+            aria-expanded={openIndex === index}
+            aria-controls={`answer-${index}`}
+            tabIndex="0"
+          >
             <QuestionContainer>
               <Question>{faq.question}</Question>
               <Arrow isOpen={openIndex === index}>
                 {openIndex === index ? <FaChevronUp /> : <FaChevronDown />}
               </Arrow>
             </QuestionContainer>
-            <Answer isOpen={openIndex === index}>{faq.answer}</Answer>
+            <Answer id={`answer-${index}`} isOpen={openIndex === index}>
+              {faq.answer}
+            </Answer>
           </FAQItem>
         ))}
       </FAQContainer>

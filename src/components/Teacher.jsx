@@ -111,38 +111,41 @@ const SocialLink = styled.a`
 
 const Teacher = ({ name, subject, bio, image, linkedin, twitter, instagram }) => {
   return (
-    <TeacherRow>
-      <TeacherImage src={image} alt={`${name}'s portrait`} />
-      <TeacherInfo>
-        <TeacherName>{name}</TeacherName>
-        <TeacherSubject>{subject}</TeacherSubject>
-        <TeacherBio>{bio}</TeacherBio>
-        <SocialLinks>
-          {linkedin && (
-            <SocialLink href={linkedin} target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedin} style={{ color: "#0077b5" }} />
-            </SocialLink>
-          )}
-          {twitter && (
-            <SocialLink href={twitter} target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTwitter} style={{ color: "#000000" }} />
-            </SocialLink>
-          )}
-          {instagram && (
-            <SocialLink href={instagram} target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faInstagram} style={{ color: "#e1306c" }} />
-            </SocialLink>
-          )}
-        </SocialLinks>
-      </TeacherInfo>
-    </TeacherRow>
+    <article>
+      <TeacherRow>
+        <TeacherImage src={image} alt={`Portrait of ${name}`} />
+        <TeacherInfo>
+          <TeacherName>{name}</TeacherName>
+          <TeacherSubject>{subject}</TeacherSubject>
+          <TeacherBio>{bio}</TeacherBio>
+          <SocialLinks>
+            {linkedin && (
+              <SocialLink href={linkedin} target="_blank" rel="noopener noreferrer" aria-label={`LinkedIn profile of ${name}`}>
+                <FontAwesomeIcon icon={faLinkedin} style={{ color: "#0077b5" }} />
+              </SocialLink>
+            )}
+            {twitter && (
+              <SocialLink href={twitter} target="_blank" rel="noopener noreferrer" aria-label={`Twitter profile of ${name}`}>
+                <FontAwesomeIcon icon={faTwitter} style={{ color: "#000000" }} />
+              </SocialLink>
+            )}
+            {instagram && (
+              <SocialLink href={instagram} target="_blank" rel="noopener noreferrer" aria-label={`Instagram profile of ${name}`}>
+                <FontAwesomeIcon icon={faInstagram} style={{ color: "#e1306c" }} />
+              </SocialLink>
+            )}
+          </SocialLinks>
+        </TeacherInfo>
+      </TeacherRow>
+    </article>
   );
 };
 
 const TeachersList = () => {
   const teachers = [
     {
-      subject: "Prem Sandesh",
+      name: "Prem Sandesh",
+      subject: "Price Action Trading Expert",
       bio: "With over eight years of experience in price action trading and a specialization in swing trades, I offer unparalleled expertise in market dynamics. My mission is to equip aspiring traders with essential insights and skills for confident, profitable market navigation. Discover comprehensive strategies and practical techniques tailored for success. Join me to enhance your trading skills and achieve remarkable results in the ever-evolving financial markets.",
       image: "./images/prem.jpg",
       linkedin: "https://www.linkedin.com/in/prem-sandesh-b29927289/",
@@ -150,7 +153,8 @@ const TeachersList = () => {
       instagram: "https://www.instagram.com/stock.archery/",
     },
     {
-      subject: "Kumar Ankit",
+      name: "Kumar Ankit",
+      subject: "Certified Researcher, Trader, and Financial Advisor",
       bio: "Hello, I'm Kumar Ankit, your dedicated mentor—Certified Researcher, Trader, and Financial Advisor with nearly a decade of market experience. With my extensive expertise, I emphasize that mastering a single trading setup can lead to significant success in the stock market. My mission is to guide you in discovering that pivotal setup, ensuring you have the tools and knowledge needed to excel. Join me to unlock your trading potential and achieve financial success with proven strategies and personalized support. See you soon on your path to market mastery!",
       image: "./images/ankit.jpg",
       linkedin: "https://www.linkedin.com/in/kumar-ankit-964823323/",

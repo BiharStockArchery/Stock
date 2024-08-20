@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faInstagram, faYoutube, faTwitter, faWhatsapp, } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faInstagram, faYoutube, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const phoneNumber = '+917371089421'; // Your phone number in international format
@@ -10,16 +10,16 @@ const Footer = () => {
 
   return (
     <Wrapper>
-      <section className="contact-short">
+      <section className="contact-short" aria-labelledby="contact-short-heading">
         <div className="grid grid-two-column">
           <div className="contact-text">
-            <h3>Talk to us today</h3>
+            <h3 id="contact-short-heading">Talk to us today</h3>
           </div>
 
           <div className="contact-short-btn">
-            <a href={whatsappURL} target="_blank" rel="noopener noreferrer">
+            <a href={whatsappURL} target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
               <StyledButton>
-                <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" />
+                <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" aria-hidden="true" />
                 <span>Contact Us</span>
               </StyledButton>
             </a>
@@ -27,49 +27,52 @@ const Footer = () => {
         </div>
       </section>
 
-      {/* footer section  */}
-      <footer>
+      {/* footer section */}
+      <footer aria-labelledby="footer-heading" role="contentinfo">
         <div className="container grid grid-four-column">
           <div className="footer-about">
-            <h3><span className="stock">Stock</span> <span className="archery">Archery</span></h3>
-            <a href="/">
+            <h3 id="footer-heading"><span className="stock">Stock</span> <span className="archery">Archery</span></h3>
+            <a href="/" aria-label="Visit our homepage">
               <p>Besides Babulal Sweets, Manik Sarkar Chowk, Adampur, Bhagalpur - 812001, Bihar.</p>
             </a>
           </div>
 
           {/* 2nd column */}
           <div className="footer-subscribe">
-            <h3>Feel Free to Contact us</h3>
-            <form action="https://formspree.io/f/mzzpddag" method="POST">
-              <input
-                name="phone"
-                type="tel"
-                required
-                autoComplete="off"
-                placeholder="Phone number"
-              />
-              <input type="submit" value="Submit" />
+            <h3>Feel Free to Contact Us</h3>
+            <form action="https://formspree.io/f/mzzpddag" method="POST" aria-labelledby="subscribe-form-heading">
+              
+                <input
+                  id="phone-input"
+                  name="phone"
+                  type="tel"
+                  required
+                  autoComplete="off"
+                  placeholder="Phone number"
+                />
+                <input type="submit" value="Submit" aria-label="Submit subscription form" />
+              
             </form>
           </div>
 
           {/* 3rd column */}
           <div className="footer-social">
             <h3>Follow Us</h3>
-            <div className="footer-social--icons">
-              <a href="https://www.linkedin.com/company/stockarchery/" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faLinkedin}  style={{ color: "#0077b5" }} className="icons" />
+            <div className="footer-social--icons" role="list">
+              <a href="https://www.linkedin.com/company/stockarchery/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn">
+                <FontAwesomeIcon icon={faLinkedin} style={{ color: "#0077b5" }} className="icons" />
               </a>
               
-              <a href="https://www.instagram.com/stock.archery/?hl=en" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faInstagram}  style={{ color: "#e1306c" }} className="icons" />
+              <a href="https://www.instagram.com/stock.archery/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                <FontAwesomeIcon icon={faInstagram} style={{ color: "#e1306c" }} className="icons" />
               </a>
       
-              <a href="https://www.youtube.com/@stock.archery" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faYoutube}  style={{ color: "#ff0000" }} className="icons" />
+              <a href="https://www.youtube.com/@stock.archery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on YouTube">
+                <FontAwesomeIcon icon={faYoutube} style={{ color: "#ff0000" }} className="icons" />
               </a>
               
-              <a href="https://x.com/stockarchery" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faTwitter}  style={{ color: "#0077b5" }} className="icons" />
+              <a href="https://x.com/stockarchery" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
+                <FontAwesomeIcon icon={faTwitter} style={{ color: "#0077b5" }} className="icons" />
               </a>
               
             </div>
@@ -78,8 +81,8 @@ const Footer = () => {
           {/* 4th column */}
           <div className="footer-contact">
             <h3>Call Us</h3>
-            <a href="tel:+919229102334"><h3>+91 9229102334</h3></a>
-            <a href="tel:+918252052601"><h3>+91 8252052601</h3></a>
+            <a href="tel:+919229102334" aria-label="Call us at +91 9229102334"><h3>+91 9229102334</h3></a>
+            <a href="tel:+918252052601" aria-label="Call us at +91 8252052601"><h3>+91 8252052601</h3></a>
           </div>
         </div>
 
@@ -91,8 +94,8 @@ const Footer = () => {
               @{new Date().getFullYear()} StockArchery. All Rights Reserved
             </p>
             <div>
-              <p>PRIVACY POLICY</p>
-              <p>TERMS & CONDITIONS</p>
+              <a href="/privacy-policy" aria-label="Privacy Policy"><p>PRIVACY POLICY</p></a>
+              <a href="/terms-and-conditions" aria-label="Terms and Conditions"><p>TERMS & CONDITIONS</p></a>
             </div>
           </div>
         </div>
@@ -175,7 +178,7 @@ const Wrapper = styled.section`
         flex-direction: column;
         gap: 1rem;
 
-        input[type="email"] {
+        input[type="tel"] {
           width: 250px;
           padding: 0.75rem 1rem;
           border-radius: 1.5rem;

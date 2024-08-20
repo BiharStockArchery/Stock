@@ -51,7 +51,7 @@ const CardContainer = styled.div`
   transition: background-color 0.3s, transform 0.3s;
 
   &:hover {
-    background-color:  rgba(37, 37, 37, 255);
+    background-color: rgba(37, 37, 37, 255);
     transform: translateY(-10px);
   }
 
@@ -83,10 +83,18 @@ const CardReview = styled.div`
 
 const Card = ({ name, review, imageSrc, onMouseEnter, onMouseLeave }) => {
   return (
-    <CardContainer onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-      <CardImage src={imageSrc} alt="Card Image" />
-      <CardName>{name}</CardName>
-      <CardReview>{review}</CardReview>
+    <CardContainer 
+      onMouseEnter={onMouseEnter} 
+      onMouseLeave={onMouseLeave}
+      aria-labelledby={`card-name-${name}`} 
+      aria-describedby={`card-review-${name}`}
+    >
+      <CardImage 
+        src={imageSrc} 
+        alt={`Review from ${name}`} 
+      />
+      <CardName id={`card-name-${name}`}>{name}</CardName>
+      <CardReview id={`card-review-${name}`}>{review}</CardReview>
     </CardContainer>
   );
 };
@@ -167,7 +175,7 @@ const Review = () => {
 
   return (
     <PageContainer>
-      <Heading>TESTIMONIALS</Heading>
+      <Heading>Testimonials</Heading>
       <ReviewWrapper>
         <ReviewContainer ref={reviewContainerRef}>
           {cards.map((card, index) => (

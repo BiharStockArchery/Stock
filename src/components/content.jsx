@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 const AboutPage = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -8,9 +9,9 @@ const AboutPage = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    
+
     window.addEventListener('resize', handleResize);
-    
+
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -169,67 +170,81 @@ const AboutPage = () => {
     },
     {
       title: 'One-on-One Mentorship',
-      text: 'Stock Archery offers personalized mentorship, empowering you with tailored guidance and support for success',
+      text: 'Stock Archery offers personalized mentorship, empowering you with tailored guidance and support for success.',
       image: './images/2nd.jpeg',
-      backText: 'Our exclusive one-on-one mentorship program offers personalized support tailored to your unique trading needs. Designed to help you navigate the complexities of the stock market with confidence, this program provides direct access to expert guidance and customized strategies. ',
+      backText: 'Our exclusive one-on-one mentorship program offers personalized support tailored to your unique trading needs. Designed to help you navigate the complexities of the stock market with confidence, this program provides direct access to expert guidance and customized strategies.',
     },
     {
       title: 'Doubt Clearing Sessions',
       text: 'We are dedicated to sustainable practices that protect the environment and promote a healthier future.',
       image: './images/3rd.jpeg',
-      backText: 'Clear your doubts and overcome trading challenges with our in-depth, personalized sessions. Our program is designed to tackle your specific trading issues head-on, providing targeted solutions and expert advice to address your unique concerns. Benefit from comprehensive, one-on-one discussions that focus on resolving your trading difficulties and refining your strategies. ',
+      backText: 'Clear your doubts and overcome trading challenges with our in-depth, personalized sessions. Our program is designed to tackle your specific trading issues head-on, providing targeted solutions and expert advice to address your unique concerns. Benefit from comprehensive, one-on-one discussions that focus on resolving your trading difficulties and refining your strategies.',
     },
     {
       title: '1 Year Handhold Support',
       text: 'We actively engage with and support our local communities through various initiatives and partnerships.',
       image: './images/4th.jpeg',
-      backText: 'Enjoy a full year of dedicated support with our comprehensive trading program, designed to keep you on track with your trading goals and ensure continuous progress. Our year-long support package offers you ongoing access to expert guidance, personalized feedback, and strategic insights tailored to your evolving needs. ',
+      backText: 'Enjoy a full year of dedicated support with our comprehensive trading program, designed to keep you on track with your trading goals and ensure continuous progress. Our year-long support package offers you ongoing access to expert guidance, personalized feedback, and strategic insights tailored to your evolving needs.',
     },
   ];
 
   return (
-    <div style={containerStyle}>
-      <div style={headerStyle}>
-        <img src="./images/about1.svg" alt="About Us" style={imageStyle} />
-        <div style={textContainerStyle}>
-          <h1 style={titleStyle}>
-            <span style={whiteTextStyle}>ABOUT</span> US
-          </h1>
-          <p style={paragraphStyle}>
-          Stock Archery is Bihar’s premier trading floor and educational hub, offering unmatched hands-on trading education during live market sessions. As a pioneer in the region, we specialize in practical, real-time trading experience. Our expert trainers provide comprehensive, step-by-step guidance, ensuring that students master essential trading skills. At Stock Archery, our innovative approach promotes learning by doing—students trade alongside seasoned professionals, merging theory with real-world practice. Whether you're a novice or seeking advanced skill enhancement, Stock Archery delivers tailored classes to achieve your trading goals. Discover the future of trading education and elevate your market success with us today
-          </p>
-        </div>
-      </div>
+    <>
+      <Helmet>
+        <title>About Us | Stock Archery</title>
+        <meta name="description" content="Learn about Stock Archery, Bihar’s premier trading floor offering hands-on trading education, live market sessions, and personalized mentorship. Discover our innovative approach and services to enhance your trading skills." />
+        <meta name="keywords" content="Stock Archery, trading education, live market sessions, one-on-one mentorship, trading support, Bihar" />
+        <meta property="og:title" content="About Us | Stock Archery" />
+        <meta property="og:description" content="Discover Stock Archery's premier trading floor in Bihar. Learn about our live market sessions, one-on-one mentorship, and year-long support programs designed to enhance your trading skills." />
+        <meta property="og:image" content="./images/about1.svg" />
+        <meta property="og:url" content="https://www.stockarchery.com/about" />
+      </Helmet>
 
-      <h1 style={cardsHeaderStyle}>
-        <span style={whiteTextStyle}>Our</span> Services
-      </h1>
+      <div style={containerStyle}>
+        <section style={headerStyle}>
+          <img src="./images/about1.svg" alt="About Stock Archery" style={imageStyle} />
+          <div style={textContainerStyle}>
+            <h1 style={titleStyle}>
+              <span style={whiteTextStyle}>ABOUT</span> US
+            </h1>
+            <p style={paragraphStyle}>
+              Stock Archery is Bihar’s premier trading floor and educational hub, offering unmatched hands-on trading education during live market sessions. As a pioneer in the region, we specialize in practical, real-time trading experience. Our expert trainers provide comprehensive, step-by-step guidance, ensuring that students master essential trading skills. At Stock Archery, our innovative approach promotes learning by doing—students trade alongside seasoned professionals, merging theory with real-world practice. Whether you're a novice or seeking advanced skill enhancement, Stock Archery delivers tailored classes to achieve your trading goals. Discover the future of trading education and elevate your market success with us today.
+            </p>
+          </div>
+        </section>
 
-      <div style={cardsContainerStyle}>
-        {cardData.map((card, i) => (
-          <div
-            key={i}
-            style={cardContainerStyle}
-            onMouseEnter={() => setHoveredCard(i)}
-            onMouseLeave={() => setHoveredCard(null)}
-          >
-            <div style={flipCardInnerStyle(hoveredCard === i)}>
-              <div style={flipCardFrontStyle}>
-                <img src={card.image} alt={card.title} style={cardImageStyle} />
-                <strong>
-                  <h2 style={cardHeadingStyle}>{card.title}</h2>
-                </strong>
-                <p style={cardTextStyle}>{card.text}</p>
-              </div>
-              <div style={flipCardBackStyle}>
-                <h2 style={backHeadingHiddenStyle}>{card.title}</h2>
-                <p style={cardTextStyle}>{card.backText}</p>
+        <h1 style={cardsHeaderStyle}>
+          <span style={whiteTextStyle}>Our</span> Services
+        </h1>
+
+        <div style={cardsContainerStyle}>
+          {cardData.map((card, i) => (
+            <div
+              key={i}
+              style={cardContainerStyle}
+              onMouseEnter={() => setHoveredCard(i)}
+              onMouseLeave={() => setHoveredCard(null)}
+              role="region"
+              aria-labelledby={`card-${i}-title`}
+            >
+              <div style={flipCardInnerStyle(hoveredCard === i)}>
+                <div style={flipCardFrontStyle}>
+                  <img src={card.image} alt={`Image representing ${card.title}`} style={cardImageStyle} />
+                  <strong>
+                    <h2 id={`card-${i}-title`} style={cardHeadingStyle}>{card.title}</h2>
+                  </strong>
+                  <p style={cardTextStyle}>{card.text}</p>
+                </div>
+                <div style={flipCardBackStyle}>
+                  <h2 style={backHeadingHiddenStyle} aria-hidden="true">{card.title}</h2>
+                  <p style={cardTextStyle}>{card.backText}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
