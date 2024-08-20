@@ -11,7 +11,7 @@ import { ThemeProvider } from 'styled-components';
 import Review from './components/review';
 import Video from './components/Video';
 import FAQ from './components/Faq';
-import Prospectus from './components/prospectus';
+
 import WhatsAppButton from './components/Whatsappbutton';
 import Content from './components/content';
 import Testimonials from './components/testimonial';
@@ -53,7 +53,7 @@ const App = () => {
           <Route path="/review" element={<Review />} />
           <Route path="/video" element={<Video />} />
           <Route path="/FAQ" element={<FAQ />} />
-          <Route path="/Prospectus" element={<Prospectus />} />
+         
           <Route path="/content" element={<Content />} />
           <Route path="/testimonial" element={<Testimonials />} />
           <Route path="/new" element={<New />} />
