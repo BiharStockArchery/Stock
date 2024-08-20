@@ -1,0 +1,31 @@
+# Allow all search engines access to the entire site
+User-agent: *
+Disallow: /private/
+Disallow: /temporary/
+Disallow: /cgi-bin/
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Disallow: /no-google/
+
+# Sitemap location
+Sitemap: https://www.example.com/sitemap.xml
+
+# Prevent indexing of specific parameters
+User-agent: *
+Disallow: /*?session_id=
+Disallow: /*?sort=
+
+# Allow specific bots if needed
+User-agent: Bingbot
+Disallow: /no-bing/
+
+# Allow access to important directories
+Allow: /public/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Crawl-delay for specific bots to prevent overload
+User-agent: *
+Crawl-delay: 10
