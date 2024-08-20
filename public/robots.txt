@@ -9,7 +9,7 @@ User-agent: Googlebot
 Disallow: /no-google/
 
 # Sitemap location
-Sitemap: https://www.example.com/sitemap.xml
+Sitemap: https://stockarchery.in/sitemap.xml
 
 # Prevent indexing of specific parameters
 User-agent: *
