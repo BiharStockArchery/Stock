@@ -17,6 +17,7 @@ import Content from './components/content';
 import Testimonials from './components/testimonial';
 import New from './components/new';
 import SectionsPage from './components/sectionpage';
+import BlogPage from './components/blogpage';
 
 const theme = {
   colors: {
@@ -53,7 +54,7 @@ const App = () => {
           <Route path="/review" element={<Review />} />
           <Route path="/video" element={<Video />} />
           <Route path="/FAQ" element={<FAQ />} />
-         
+         <Route path="/blog" element={<BlogPage />} />
           <Route path="/content" element={<Content />} />
           <Route path="/testimonial" element={<Testimonials />} />
           <Route path="/new" element={<New />} />
