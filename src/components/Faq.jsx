@@ -91,11 +91,11 @@ const FAQ = () => {
   const faqs = [
     {
       question: 'Whom is this training suitable for ?',
-      answer: 'This capital markets training is perfect for individuals with a Higher Secondary School education (Class 12) who want to build a strong foundation in financial markets. It offers a blend of theoretical and practical knowledge, making it ideal for students and aspiring finance professionals looking to enhance their understanding of market dynamics, investment strategies, and financial analysis.'
+      answer: 'Anyone intrested in learning stock market from scratch is welcome to join the course.'
     },
     {
       question: 'Is laptop mandatory to attend the training ?',
-      answer: 'No, a laptop is not mandatory to attend our capital markets training. However, having a laptop is highly recommended as it enhances your learning experience.'
+      answer: 'No, a laptop is not mandatory to attend the training. However, having a laptop is highly recommended as it enhances your learning experience.'
     },
     {
       question: 'Do I need to pay entire fees at once ?',
@@ -103,24 +103,18 @@ const FAQ = () => {
     },
     {
       question: 'How long will this training last ?',
-      answer: 'The training duration is 2 months, excluding weekends, with one year of handholding support.'
+      answer: 'The training duration is of 2 months, excluding weekends, with one year of handholding support.'
     },
     {
       question: 'Will I be able to trade independently after this training ends ?',
       answer: 'Absolutely Yes, many individuals successfully pursue trading as a full-time career after this course.'
     },
     {
-      question: 'Will I receive a certificate after course completion ?',
-      answer: 'Yes, you will receive a certificate of participation.'
+      question: 'Will I receive a certificate of course completion ?',
+      answer: 'Yes, you will.'
     },
-    {
-      question: 'What is the Stock Market?',
-      answer: 'The stock market is a financial marketplace where investors buy and sell shares of publicly traded companies. It provides a platform for trading equity securities, such as stocks and bonds, allowing companies to raise capital and investors to potentially earn returns through dividends and capital gains.'
-    },
-    {
-      question: 'Course Benefits and Future Opportunities',
-      answer: 'Our comprehensive stock market course delivers essential knowledge, practical skills, and valuable opportunities to excel in the financial markets and achieve your financial goals. This training equips you with in-depth insights into stock trading, investment strategies, and market analysis, empowering you to make informed decisions and maximize your returns.'
-    }
+   
+    
   ];
 
   return (
