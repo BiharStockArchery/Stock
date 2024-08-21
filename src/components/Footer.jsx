@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faInstagram, faYoutube, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
-  const phoneNumber = '+917371089421'; // Your phone number in international format
-  const message = encodeURIComponent('Hello, I need more information about your services'); // URL-encoded message
+  const phoneNumber = '+919229102334'; // Your phone number in international format
+  const message = encodeURIComponent('Hi, I was just checking out your website, and Im interested in learning more about your trading floor and live market sessions. Can you provide me with more details?'); // URL-encoded message
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (
