@@ -16,11 +16,11 @@ const Home = () => {
 
   return (
     <>
-      <HeroSection />
-      
+      <HeroSection /> 
       <Video/>
-    
       <SectionsPage/>
+  
+
      
      
      
