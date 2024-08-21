@@ -165,25 +165,25 @@ const AboutPage = () => {
     {
       title: 'Live Market Sessions',
       text: 'Our trading floor, the first of its kind in Bihar, offers a unique opportunity to learn and trade during live market.',
-      image: './images/1st.jpeg',
+      image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152392/2nd_s04uzo.jpg',
       backText: 'Join our live market sessions at Stock Archery to gain unparalleled real-time trading experience and actionable insights directly from industry experts. Our sessions offer a unique opportunity to engage with the market as it unfolds, providing you with hands-on learning and immediate feedback from seasoned professionals.',
     },
     {
       title: 'One-on-One Mentorship',
       text: 'Stock Archery offers personalized mentorship, empowering you with tailored guidance and support for success.',
-      image: './images/2nd.jpeg',
+      image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152392/3rd_jem2df.jpg',
       backText: 'Our exclusive one-on-one mentorship program offers personalized support tailored to your unique trading needs. Designed to help you navigate the complexities of the stock market with confidence, this program provides direct access to expert guidance and customized strategies.',
     },
     {
       title: 'Doubt Clearing Sessions',
       text: 'We are dedicated to sustainable practices that protect the environment and promote a healthier future.',
-      image: './images/3rd.jpeg',
+      image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152393/5th_-_Copy_flkcme.jpg',
       backText: 'Clear your doubts and overcome trading challenges with our in-depth, personalized sessions. Our program is designed to tackle your specific trading issues head-on, providing targeted solutions and expert advice to address your unique concerns. Benefit from comprehensive, one-on-one discussions that focus on resolving your trading difficulties and refining your strategies.',
     },
     {
       title: '1 Year Handhold Support',
       text: 'We actively engage with and support our local communities through various initiatives and partnerships.',
-      image: './images/4th.jpeg',
+      image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152389/1st_-_Copy_iarhze.jpg',
       backText: 'Enjoy a full year of dedicated support with our comprehensive trading program, designed to keep you on track with your trading goals and ensure continuous progress. Our year-long support package offers you ongoing access to expert guidance, personalized feedback, and strategic insights tailored to your evolving needs.',
     },
   ];
@@ -202,7 +202,7 @@ const AboutPage = () => {
 
       <div style={containerStyle}>
         <section style={headerStyle}>
-          <img src="./images/about1.svg" alt="About Stock Archery" style={imageStyle} />
+          <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152394/about1_sz1ch8.svg" alt="About Stock Archery" style={imageStyle} />
           <div style={textContainerStyle}>
             <h1 style={titleStyle}>
               <span style={whiteTextStyle}>ABOUT</span> US

@@ -6,49 +6,49 @@ const reviews = [
     name: "Manav Ranjan",
     review: "Prem sir ka experience aur energetic class environment se maine live trading mein confidence paya. Standoff strategies bahut helpful hain.",
     rating: 5,
-    image: "./images/stu55.jpg"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152411/stu55_ol06xn.jpg"
   },
   {
     name: "Shahwaz Alam",
     review: "I learned so much about the stock market from Ankit Sir. His classes are clear and helpful. Highly recommended",
     rating: 4,
-    image: "./images/student3.jpg"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152416/student3_etfv4z.png"
   },
   {
     name: "Vaihavb",
     review: "Live market mein trading ka experience anokha tha. Ankit sir, Prem sir, aur Prabhas sir ke guidance meinmaine kaafi kuch seekha.",
     rating: 5,
-    image: "./images/stu44.png"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152410/stu44_g3jjqj.png"
   },
   {
     name: "Tripti Sharma",
     review: "I am thankful to have found Prem on Instagram, conducting live market classes from Bihar. Stock Archery real-time sessions are insightful and interactive, offering a thorough understanding of market dynamics.",
     rating: 5,
-    image: "./images/student5.png"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152417/student5_ll2sal.png"
   },
   {
     name: "Deepak Kumar",
     review: "Stock Archery ne mujhe trading ke basics aur advanced dono level pe mahir banaya. Bhagalpur jaise chote sheher mein aisa platform milna sach mein incredible ha",
     rating: 5,
-    image: "./images/student6.png"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152417/student6_xplvbd.png"
   },
   {
     name: "Anushka Singh",
     review: "Stock Archery ke live classes kamaal ki hain! Real-time market ke sath trading seekhne ka maza hi kuch aur hai. Professionals ke sath trade karke bahut kuch naya seekhne ko mila. Bahut helpful aur informative sessions hain. Highly recommended.",
     rating: 5,
-    image: "./images/stuu55.jpg"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152417/stuu55_bjn84b.jpg"
   },
   {
     name: "Harsh Raj",
     review: "Real-time market ke sath trading seekhna ek zabardast experience hai. Professionals ke guidance se bahut kuch seekhne ko mila. Highly recommended for serious traders!",
     rating: 5,
-    image: "./images/stuu66.jpg"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152417/stuu66_nctcb4.jpg"
   },
   {
     name: "Amit Kumar",
     review: "Real-time trading se confidence badta hai aur strategies ko easily implement karne ka mauka milta hai. Instructors bhi bahut supportive hain. Ideal for trading beginners and experts alike!.",
     rating: 5,
-    image: "./images/stuu77.jpg"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152417/stuu77_bnuuhv.jpg"
   },
 ];
 

@@ -113,17 +113,17 @@ const SectionsPage = () => (
     <PageHeading><span>Our</span> Services</PageHeading>
     <Row>
       <SectionComponent
-        image="./images/4th.jpeg"
+        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152392/4th_-_Copy_bxcdbz.jpg"
         heading={<><strong>Bihar’s First Live Trading Institute</strong></>}
         text="The only institute in Bihar offering real-time trading classes, setting a new standard for stock market education."
       />
       <SectionComponent
-        image="./images/2nd.jpeg"
+        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152392/2nd_s04uzo.jpg"
         heading={<><strong>Learn and Trade Simultaneously</strong></>}
         text="Students gain hands-on experience by learning and trading in a live market environment."
       />
       <SectionComponent
-        image="./images/3rd.jpeg"
+        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152392/3rd_-_Copy_vredry.jpg"
         heading={<><strong>Expert Mentor Guidance</strong></>}
         text="Benefit from personalized instruction and proven strategies from seasoned trading professionals."
       />
@@ -131,17 +131,17 @@ const SectionsPage = () => (
     <HorizontalLine />
     <Row>
       <SectionComponent
-        image="./images/1st.jpeg"
+        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152390/1st_acbapn.jpg"
         heading={<><strong>Real-Time Market Exposure</strong></>}
         text="Develop practical trading skills with immediate application in the live market."
       />
       <SectionComponent
-        image="./images/5th.jpeg"
+        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152393/5th_-_Copy_flkcme.jpg"
         heading={<><strong>Comprehensive Trading Experience</strong></>}
         text="A unique blend of theoretical knowledge and practical execution, ensuring well-rounded trading expertise."
       />
        <SectionComponent
-        image="./images/ind.jpeg"
+        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152409/ind_-_Copy_pgb10b.jpg"
         heading={<><strong>Interactive Learning Enviroment</strong></>}
         text=" Engage in an energetic and collaborative setting where real-time discussions and peer interactions enhance the learning experience."
       />
