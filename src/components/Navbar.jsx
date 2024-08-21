@@ -50,6 +50,7 @@ const Navbar = () => {
               About
             </NavLink>
           </li>
+         
           <li role="none">
             <NavLink
               className="navbar-link"
@@ -59,6 +60,17 @@ const Navbar = () => {
               aria-label="Testimonials"
             >
               Testimonials
+            </NavLink>
+          </li>
+          <li role="none">
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to="/blog"
+              role="menuitem"
+              aria-label="About Us"
+            >
+              Blogs
             </NavLink>
           </li>
           <li role="none">
