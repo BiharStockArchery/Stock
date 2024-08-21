@@ -8,7 +8,7 @@ const Header = () => {
     <MainHeader>
       <NavLink to="/">
         <LogoContainer>
-          <Logo src="./images/logo1.png" alt="Logo" />
+          <Logo src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152409/logo1_rzt9qj.png" alt="Logo" />
           <LogoText>
             <WhiteText>STOCK</WhiteText>
             <Space />
