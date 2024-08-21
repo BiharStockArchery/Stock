@@ -144,8 +144,8 @@ const Teacher = ({ name, subject, bio, image, linkedin, twitter, instagram }) =>
 const TeachersList = () => {
   const teachers = [
     {
-      name: "Prem Sandesh",
-      subject: "Price Action Trading Expert",
+     
+      subject: "Prem Sandesh",
       bio: "With over eight years of experience in price action trading and a specialization in swing trades, I offer unparalleled expertise in market dynamics. My mission is to equip aspiring traders with essential insights and skills for confident, profitable market navigation. Discover comprehensive strategies and practical techniques tailored for success. Join me to enhance your trading skills and achieve remarkable results in the ever-evolving financial markets.",
       image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152410/prem_jdeoi6.jpg",
       linkedin: "https://www.linkedin.com/in/prem-sandesh-b29927289/",
@@ -153,8 +153,8 @@ const TeachersList = () => {
       instagram: "https://www.instagram.com/stock.archery/",
     },
     {
-      name: "Kumar Ankit",
-      subject: "Certified Researcher, Trader, and Financial Advisor",
+      
+      subject: "Kumar Ankit",
       bio: "Hello, I'm Kumar Ankit, your dedicated mentor—Certified Researcher, Trader, and Financial Advisor with nearly a decade of market experience. With my extensive expertise, I emphasize that mastering a single trading setup can lead to significant success in the stock market. My mission is to guide you in discovering that pivotal setup, ensuring you have the tools and knowledge needed to excel. Join me to unlock your trading potential and achieve financial success with proven strategies and personalized support. See you soon on your path to market mastery!",
       image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152394/ankit_-_Copy_eytbng.jpg",
       linkedin: "https://www.linkedin.com/in/kumar-ankit-964823323/",
