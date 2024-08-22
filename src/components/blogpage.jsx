@@ -171,7 +171,7 @@ const BlogPage = () => {
 
             <section className="hero">
                 <div className="container">
-                    <h2>Explore Our Latest Posts</h2>
+                    <h2>BLOGS</h2>
                 </div>
             </section>
 
