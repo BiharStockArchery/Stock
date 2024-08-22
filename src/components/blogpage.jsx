@@ -157,7 +157,7 @@ const BlogPage = () => {
                 }
 
                 .share-icon {
-                    font-size: 2rem;
+                    font-size: 3rem;
                     cursor: pointer;
                     color: #0056b3;
                     transition: color 0.3s ease;
