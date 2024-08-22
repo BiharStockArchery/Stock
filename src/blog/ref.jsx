@@ -6,7 +6,7 @@ const styles = {
       overflowX: 'hidden',
     },
     header: {
-      backgroundImage: 'url(https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724322298/ZERODHA_1_eff8b0.png)', // Replace with your image URL
+      backgroundImage: 'url(https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724323330/ZERODHA_2_pmuw17.png)', // Replace with your image URL
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       color: 'white',

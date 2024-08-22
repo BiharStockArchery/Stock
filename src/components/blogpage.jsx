@@ -39,7 +39,7 @@ const BlogPage = () => {
         {
             title: "Zerodha Cancels Referral Program",
             description: "Zerodha Cancels Referral Program: A Detailed Analysis",
-            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724322298/ZERODHA_1_eff8b0.png",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724323330/ZERODHA_2_pmuw17.png",
             route: "/ref", // Use route for sharing
         },
         {
