@@ -37,10 +37,10 @@ const BlogPage = () => {
             route: "/ola", // Use route for sharing
         },
         {
-            title: "COMING SOON",
-            description: "Coming Soon",
-            imgUrl: "https://via.placeholder.com/600x400",
-            route: "/coming-soon", // Use route for sharing
+            title: "Zerodha Cancels Referral Program",
+            description: "Zerodha Cancels Referral Program: A Detailed Analysis",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724321384/ZERODHA_wl2ex1.png",
+            route: "/ref", // Use route for sharing
         },
         {
             title: "COMING SOON",

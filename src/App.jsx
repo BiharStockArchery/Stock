@@ -19,6 +19,7 @@ import New from './components/new';
 import SectionsPage from './components/sectionpage';
 import BlogPage from './components/blogpage';
 import Ola from './blog/ola';
+import Zerodha from './blog/ref'
 
 const theme = {
   colors: {
@@ -61,6 +62,7 @@ const App = () => {
           <Route path="/new" element={<New />} />
           <Route path="/sect" element={<SectionsPage />} />
           <Route path="/ola" element={<Ola/>}/>
+          <Route path="/ref" element={<Zerodha/>}/>
           <Route path="*" element={<Navigate to="/" />} /> {/* Redirect to home page for all undefined routes */}
         </Routes>
         <Footer />
