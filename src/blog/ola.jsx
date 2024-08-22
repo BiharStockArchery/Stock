@@ -127,19 +127,19 @@ const styles = {
   
           {/* Social Media Icons */}
           <div style={styles.socialIcons}>
-            <a href="https://twitter.com/share?url=https://stockarchery.github.io/ola-blog/&text=Check%20out%20this%20blog%20page%20I%20found" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}>
+            <a href="https://twitter.com/share?url=https://stockarchery.in/ola&text=Check%20out%20this%20blog%20page%20I%20found" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}>
               <i className="fab fa-twitter" style={styles.socialIconInner}></i>
             </a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://stockarchery.github.io/ola-blog/" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://stockarchery.in/ola" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}>
               <i className="fab fa-facebook-f" style={styles.socialIconInner}></i>
             </a>
-            <a href="https://wa.me/?text=https://stockarchery.github.io/ola-blog/" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}>
+            <a href="https://wa.me/?text=https://stockarchery.in/ola" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}>
               <i className="fab fa-whatsapp" style={styles.socialIconInner}></i>
             </a>
-            <a href="https://t.me/share/url?url=https://stockarchery.github.io/ola-blog/&text=Check%20out%20this%20blog%20page%20I%20found" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}>
+            <a href="https://t.me/share/url?url=https://stockarchery.in/ola&text=Check%20out%20this%20blog%20page%20I%20found" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}>
               <i className="fab fa-telegram" style={styles.socialIconInner}></i>
             </a>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://stockarchery.github.io/ola-blog/" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://stockarchery.in/ola" target="_blank" rel="noopener noreferrer" style={styles.socialIcon}>
               <i className="fab fa-linkedin" style={styles.socialIconInner}></i>
             </a>
           </div>
