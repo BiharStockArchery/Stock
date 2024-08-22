@@ -74,6 +74,18 @@ const Navbar = () => {
               Contact
             </NavLink>
           </li>
+
+          <li role="none">
+            <NavLink
+              className="navbar-link"
+              onClick={() => setOpenMenu(false)}
+              to="/blog"
+              role="menuitem"
+              aria-label="Contact Us"
+            >
+              Blogs
+            </NavLink>
+          </li>
          
           <li role="none">
             <NavLink

@@ -1,6 +1,53 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const BlogPage = () => {
+    const handleShare = (platform, url, title) => {
+        let shareUrl = '';
+
+        const encodedUrl = encodeURIComponent(url);
+        const encodedTitle = encodeURIComponent(title);
+
+        switch (platform) {
+            case 'linkedin':
+                shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`;
+                break;
+            case 'telegram':
+                shareUrl = `https://telegram.me/share/url?url=${encodedUrl}&text=${encodedTitle}`;
+                break;
+            case 'whatsapp':
+                shareUrl = `https://api.whatsapp.com/send?text=${encodedTitle} ${encodedUrl}`;
+                break;
+            default:
+                return;
+        }
+
+        window.open(shareUrl, '_blank');
+    };
+
+    const posts = [
+        {
+            title: "Ola Electric IPO Success: Journey, Milestones, and Market Impact",
+            description: "Ola Electric, a subsidiary of the ride-hailing giant Ola, has become a symbol of India's electric vehicle (EV) revolution.",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724310017/OLA_t93aul.png",
+            path: "/ola", // Updated to use relative path
+        },
+        {
+            title: "COMING SOON",
+            description: "Coming Soon",
+            imgUrl: "https://via.placeholder.com/600x400",
+            path: "/ola", // Updated to use relative path
+        },
+        {
+            title: "COMING SOON",
+            description: "Coming Soon",
+            imgUrl: "https://via.placeholder.com/600x400",
+            path: "/ola", // Updated to use relative path
+        },
+       
+    ];
+
     return (
         <div className="blog-page">
             <style>
@@ -10,25 +57,21 @@ const BlogPage = () => {
                     font-family: Arial, sans-serif;
                     margin: 0;
                     padding: 0;
-                    background:rgba(37, 37, 37, 255);
                 }
 
                 .container {
-                    width: 90%;
-                    max-width: 1200px;
+                    width: 100%;
+                    max-width: 100%;
                     margin: 0 auto;
                     padding: 20px;
-                    
+                    background: rgba(37, 37, 37, 255);
                 }
 
                 /* Hero Section Styles */
                 .hero {
-                    
                     color: black;
                     text-align: center;
-                    padding: 60px 20px;
-                    margin-bottom: 10px;
-                    
+                    background: rgba(37, 37, 37, 255);
                 }
 
                 .hero h2 {
@@ -57,6 +100,7 @@ const BlogPage = () => {
                     transition: transform 0.3s ease, box-shadow 0.3s ease;
                     text-decoration: none;
                     color: #febb12;
+                    position: relative;
                 }
 
                 .card:hover {
@@ -84,6 +128,7 @@ const BlogPage = () => {
                     font-size: 1.5rem;
                     margin: 0;
                     color: #000000;
+                    font-weight: bold;
                 }
 
                 .card-link {
@@ -99,6 +144,26 @@ const BlogPage = () => {
                 .card-link:hover {
                     color: #0056b3;
                 }
+
+                .share-icons {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 10px;
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                }
+
+                .share-icon {
+                    font-size: 2rem;
+                    cursor: pointer;
+                    color: #0056b3;
+                    transition: color 0.3s ease;
+                }
+
+                .share-icon:hover {
+                    color: #0056b3;
+                }
                 `}
             </style>
 
@@ -110,58 +175,21 @@ const BlogPage = () => {
 
             <div className="container">
                 <div className="cards-container">
-                    <a href="#post1" className="card">
-                        <img src="https://via.placeholder.com/600x400" alt="Post 1" className="card-image" />
-                        <div className="card-content">
-                            <h3 className="card-title">The Future of Web Development</h3>
-                            <p className="card-description">Explore emerging trends in web development and what the future holds for developers.</p>
-                            <span className="card-link">Read More</span>
-                        </div>
-                    </a>
-
-                    <a href="#post2" className="card">
-                        <img src="https://via.placeholder.com/600x400" alt="Post 2" className="card-image" />
-                        <div className="card-content">
-                            <h3 className="card-title">Design Principles for Modern UI</h3>
-                            <p className="card-description">Learn about key design principles that will help you create stunning user interfaces.</p>
-                            <span className="card-link">Read More</span>
-                        </div>
-                    </a>
-
-                    <a href="#post3" className="card">
-                        <img src="https://via.placeholder.com/600x400" alt="Post 3" className="card-image" />
-                        <div className="card-content">
-                            <h3 className="card-title">Mastering Responsive Design</h3>
-                            <p className="card-description">Tips and techniques for creating responsive designs that work on any device.</p>
-                            <span className="card-link">Read More</span>
-                        </div>
-                    </a>
-
-                    <a href="#post4" className="card">
-                        <img src="https://via.placeholder.com/600x400" alt="Post 4" className="card-image" />
-                        <div className="card-content">
-                            <h3 className="card-title">JavaScript ES6: What’s New</h3>
-                            <p className="card-description">Get up to speed with the latest features in JavaScript ES6 and how to use them.</p>
-                            <span className="card-link">Read More</span>
-                        </div>
-                    </a>
-
-                    <a href="#post5" className="card">
-                        <img src="https://via.placeholder.com/600x400" alt="Post 5" className="card-image" />
-                        <div className="card-content">
-                            <h3 className="card-title">Building Accessible Web Applications</h3>
-                            <p className="card-description">Best practices for ensuring your web applications are accessible to all users.</p>
-                            <span className="card-link">Read More</span>
-                        </div>
-                    </a>
-                    <a href="#post5" className="card">
-                        <img src="https://via.placeholder.com/600x400" alt="Post 5" className="card-image" />
-                        <div className="card-content">
-                            <h3 className="card-title">Building Accessible Web Applications</h3>
-                            <p className="card-description">Best practices for ensuring your web applications are accessible to all users.</p>
-                            <span className="card-link">Read More</span>
-                        </div>
-                    </a>
+                    {posts.map((post, index) => (
+                        <a href={post.path} className="card" key={index}>
+                            <img src={post.imgUrl} alt={post.title} className="card-image" />
+                            <div className="card-content">
+                                <h3 className="card-title">{post.title}</h3>
+                                <p className="card-description">{post.description}</p>
+                                <span className="card-link">Read More</span>
+                            </div>
+                            <div className="share-icons">
+                                <FontAwesomeIcon icon={faLinkedin} className="share-icon" onClick={() => handleShare('linkedin', post.path, post.title)} />
+                                <FontAwesomeIcon icon={faTelegram} className="share-icon" onClick={() => handleShare('telegram', post.path, post.title)} />
+                                <FontAwesomeIcon icon={faWhatsapp} className="share-icon" onClick={() => handleShare('whatsapp', post.path, post.title)} />
+                            </div>
+                        </a>
+                    ))}
                 </div>
             </div>
         </div>

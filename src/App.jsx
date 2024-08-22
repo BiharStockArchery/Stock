@@ -18,6 +18,7 @@ import Testimonials from './components/testimonial';
 import New from './components/new';
 import SectionsPage from './components/sectionpage';
 import BlogPage from './components/blogpage';
+import Ola from './blog/ola';
 
 const theme = {
   colors: {
@@ -59,6 +60,7 @@ const App = () => {
           <Route path="/testimonial" element={<Testimonials />} />
           <Route path="/new" element={<New />} />
           <Route path="/sect" element={<SectionsPage />} />
+          <Route path="/ola" element={<Ola/>}/>
           <Route path="*" element={<Navigate to="/" />} /> {/* Redirect to home page for all undefined routes */}
         </Routes>
         <Footer />
