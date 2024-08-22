@@ -3,11 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const BlogPage = () => {
-    const handleShare = (platform, url, title) => {
-        let shareUrl = '';
+    const handleShare = (platform, route, title) => {
+        const baseUrl = window.location.origin; // Get the base URL of the current site
+        const url = `${baseUrl}${route}`; // Combine base URL with the route
 
         const encodedUrl = encodeURIComponent(url);
         const encodedTitle = encodeURIComponent(title);
+
+        let shareUrl = '';
 
         switch (platform) {
             case 'linkedin':
@@ -31,21 +34,20 @@ const BlogPage = () => {
             title: "Ola Electric IPO Success: Journey, Milestones, and Market Impact",
             description: "Ola Electric, a subsidiary of the ride-hailing giant Ola, has become a symbol of India's electric vehicle (EV) revolution.",
             imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724310017/OLA_t93aul.png",
-            path: "/ola", // Updated to use relative path
+            route: "/ola", // Use route for sharing
         },
         {
             title: "COMING SOON",
             description: "Coming Soon",
             imgUrl: "https://via.placeholder.com/600x400",
-            path: "/ola", // Updated to use relative path
+            route: "/coming-soon", // Use route for sharing
         },
         {
             title: "COMING SOON",
             description: "Coming Soon",
             imgUrl: "https://via.placeholder.com/600x400",
-            path: "/ola", // Updated to use relative path
+            route: "/coming-soon", // Use route for sharing
         },
-       
     ];
 
     return (
@@ -176,7 +178,7 @@ const BlogPage = () => {
             <div className="container">
                 <div className="cards-container">
                     {posts.map((post, index) => (
-                        <a href={post.path} className="card" key={index}>
+                        <a href={post.route} className="card" key={index}>
                             <img src={post.imgUrl} alt={post.title} className="card-image" />
                             <div className="card-content">
                                 <h3 className="card-title">{post.title}</h3>
@@ -184,9 +186,9 @@ const BlogPage = () => {
                                 <span className="card-link">Read More</span>
                             </div>
                             <div className="share-icons">
-                                <FontAwesomeIcon icon={faLinkedin} className="share-icon" onClick={() => handleShare('linkedin', post.path, post.title)} />
-                                <FontAwesomeIcon icon={faTelegram} className="share-icon" onClick={() => handleShare('telegram', post.path, post.title)} />
-                                <FontAwesomeIcon icon={faWhatsapp} className="share-icon" onClick={() => handleShare('whatsapp', post.path, post.title)} />
+                                <FontAwesomeIcon icon={faLinkedin} className="share-icon" onClick={() => handleShare('linkedin', post.route, post.title)} />
+                                <FontAwesomeIcon icon={faTelegram} className="share-icon" onClick={() => handleShare('telegram', post.route, post.title)} />
+                                <FontAwesomeIcon icon={faWhatsapp} className="share-icon" onClick={() => handleShare('whatsapp', post.route, post.title)} />
                             </div>
                         </a>
                     ))}
