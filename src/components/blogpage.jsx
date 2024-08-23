@@ -1,7 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { Helmet } from 'react-helmet';
 
 const BlogPage = () => {
     const posts = [
@@ -37,13 +36,13 @@ const BlogPage = () => {
 
         switch (platform) {
             case 'linkedin':
-                shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}&summary=${encodedTitle}&source=${encodedUrl}&image=${encodedImgUrl}`;
+                shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`;
                 break;
             case 'telegram':
-                shareUrl = `https://telegram.me/share/url?url=${encodedUrl}&text=${encodedTitle}`;
+                shareUrl = `https://telegram.me/share/url?url=${encodedUrl}&text=${encodedTitle} - ${encodedImgUrl}`;
                 break;
             case 'whatsapp':
-                shareUrl = `https://api.whatsapp.com/send?text=${encodedTitle} ${encodedUrl}`;
+                shareUrl = `https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}%20%0A%0AImage:%20${encodedImgUrl}`;
                 break;
             default:
                 return;
@@ -54,16 +53,6 @@ const BlogPage = () => {
 
     return (
         <div className="blog-page">
-            {posts.map((post, index) => (
-                <Helmet key={index}>
-                    <meta property="og:url" content={`${window.location.origin}${post.route}`} />
-                    <meta property="og:type" content="article" />
-                    <meta property="og:title" content={post.title} />
-                    <meta property="og:description" content={post.description} />
-                    <meta property="og:image" content={post.imgUrl} />
-                </Helmet>
-            ))}
-
             <style>
                 {`
                 /* General Styles */
