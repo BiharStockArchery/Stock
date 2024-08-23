@@ -33,20 +33,20 @@ const BlogPage = () => {
         {
             title: "Ola Electric IPO Success: Journey, Milestones, and Market Impact",
             description: "Ola Electric, a subsidiary of the ride-hailing giant Ola, has become a symbol of India's electric vehicle (EV) revolution.",
-            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724310017/OLA_t93aul.png",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724395871/Grey_minimalist_business_project_presentation_eqv2bp.png",
             route: "/ola", // Use route for sharing
         },
         {
             title: "Zerodha Cancels Referral Program",
             description: "Zerodha Cancels Referral Program: A Detailed Analysis",
-            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724323330/ZERODHA_2_pmuw17.png",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724396033/Simple_Presentation_in_Pink_Lilac_Pastel_Blobs_Basic_Style_wul5th.png",
             route: "/ref", // Use route for sharing
         },
         {
-            title: "COMING SOON",
-            description: "Coming Soon",
-            imgUrl: "https://via.placeholder.com/600x400",
-            route: "/coming-soon", // Use route for sharing
+            title: "Stock Market Analysis During Festive Season",
+            description: "Discover how the Indian stock market has performed during the festive seasons over the last five years.",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724392937/INDIAN_STOCK_MARKET_1_jf3fls.png",
+            route: "/fest", // Use route for sharing
         },
     ];
 

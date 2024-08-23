@@ -6,7 +6,7 @@ const styles = {
       overflowX: 'hidden',
     },
     header: {
-      backgroundImage: 'url(https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724310017/OLA_t93aul.png)', // Replace with your image URL
+      backgroundImage: 'url(https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724395871/Grey_minimalist_business_project_presentation_eqv2bp.png)', // Replace with your image URL
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       color: 'white',

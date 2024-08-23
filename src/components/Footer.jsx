@@ -87,18 +87,7 @@ const Footer = () => {
         </div>
 
         {/* bottom section */}
-        <div className="footer-bottom--section">
-          <hr />
-          <div className="container grid grid-two-column">
-            <p>
-              @{new Date().getFullYear()} StockArchery. All Rights Reserved
-            </p>
-            <div>
-              <a href="/privacy-policy" aria-label="Privacy Policy"><p>PRIVACY POLICY</p></a>
-              <a href="/terms-and-conditions" aria-label="Terms and Conditions"><p>TERMS & CONDITIONS</p></a>
-            </div>
-          </div>
-        </div>
+        
       </footer>
     </Wrapper>
   );
