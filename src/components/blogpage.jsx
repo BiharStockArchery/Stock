@@ -1,11 +1,33 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { Helmet } from 'react-helmet'; // To manage the document head
 
 const BlogPage = () => {
+    const posts = [
+        {
+            title: "Ola Electric IPO Success: Journey, Milestones, and Market Impact",
+            description: "Ola Electric, a subsidiary of the ride-hailing giant Ola, has become a symbol of India's electric vehicle (EV) revolution.",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724395871/Grey_minimalist_business_project_presentation_eqv2bp.png",
+            route: "/ola",
+        },
+        {
+            title: "Zerodha Cancels Referral Program",
+            description: "Zerodha Cancels Referral Program: A Detailed Analysis",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724396033/Simple_Presentation_in_Pink_Lilac_Pastel_Blobs_Basic_Style_wul5th.png",
+            route: "/ref",
+        },
+        {
+            title: "Stock Market Analysis During Festive Season",
+            description: "Discover how the Indian stock market has performed during the festive seasons over the last five years.",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724401791/Add_a_heading_ctoegk.png",
+            route: "/fest",
+        },
+    ];
+
     const handleShare = (platform, route, title) => {
-        const baseUrl = window.location.origin; // Get the base URL of the current site
-        const url = `${baseUrl}${route}`; // Combine base URL with the route
+        const baseUrl = window.location.origin;
+        const url = `${baseUrl}${route}`;
 
         const encodedUrl = encodeURIComponent(url);
         const encodedTitle = encodeURIComponent(title);
@@ -29,29 +51,12 @@ const BlogPage = () => {
         window.open(shareUrl, '_blank');
     };
 
-    const posts = [
-        {
-            title: "Ola Electric IPO Success: Journey, Milestones, and Market Impact",
-            description: "Ola Electric, a subsidiary of the ride-hailing giant Ola, has become a symbol of India's electric vehicle (EV) revolution.",
-            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724395871/Grey_minimalist_business_project_presentation_eqv2bp.png",
-            route: "/ola", // Use route for sharing
-        },
-        {
-            title: "Zerodha Cancels Referral Program",
-            description: "Zerodha Cancels Referral Program: A Detailed Analysis",
-            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724396033/Simple_Presentation_in_Pink_Lilac_Pastel_Blobs_Basic_Style_wul5th.png",
-            route: "/ref", // Use route for sharing
-        },
-        {
-            title: "Stock Market Analysis During Festive Season",
-            description: "Discover how the Indian stock market has performed during the festive seasons over the last five years.",
-            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724401791/Add_a_heading_ctoegk.png",
-            route: "/fest", // Use route for sharing
-        },
-    ];
-
     return (
         <div className="blog-page">
+            <Helmet>
+                <title>Blog Page</title>
+            </Helmet>
+
             <style>
                 {`
                 /* General Styles */
@@ -178,19 +183,28 @@ const BlogPage = () => {
             <div className="container">
                 <div className="cards-container">
                     {posts.map((post, index) => (
-                        <a href={post.route} className="card" key={index}>
-                            <img src={post.imgUrl} alt={post.title} className="card-image" />
-                            <div className="card-content">
-                                <h3 className="card-title">{post.title}</h3>
-                                <p className="card-description">{post.description}</p>
-                                <span className="card-link">Read More</span>
-                            </div>
-                            <div className="share-icons">
-                                <FontAwesomeIcon icon={faLinkedin} className="share-icon" onClick={() => handleShare('linkedin', post.route, post.title)} />
-                                <FontAwesomeIcon icon={faTelegram} className="share-icon" onClick={() => handleShare('telegram', post.route, post.title)} />
-                                <FontAwesomeIcon icon={faWhatsapp} className="share-icon" onClick={() => handleShare('whatsapp', post.route, post.title)} />
-                            </div>
-                        </a>
+                        <React.Fragment key={index}>
+                            <Helmet>
+                                <meta property="og:url" content={`${window.location.origin}${post.route}`} />
+                                <meta property="og:type" content="article" />
+                                <meta property="og:title" content={post.title} />
+                                <meta property="og:description" content={post.description} />
+                                <meta property="og:image" content={post.imgUrl} />
+                            </Helmet>
+                            <a href={post.route} className="card">
+                                <img src={post.imgUrl} alt={post.title} className="card-image" />
+                                <div className="card-content">
+                                    <h3 className="card-title">{post.title}</h3>
+                                    <p className="card-description">{post.description}</p>
+                                    <span className="card-link">Read More</span>
+                                </div>
+                                <div className="share-icons">
+                                    <FontAwesomeIcon icon={faLinkedin} className="share-icon" onClick={() => handleShare('linkedin', post.route, post.title)} />
+                                    <FontAwesomeIcon icon={faTelegram} className="share-icon" onClick={() => handleShare('telegram', post.route, post.title)} />
+                                    <FontAwesomeIcon icon={faWhatsapp} className="share-icon" onClick={() => handleShare('whatsapp', post.route, post.title)} />
+                                </div>
+                            </a>
+                        </React.Fragment>
                     ))}
                 </div>
             </div>
