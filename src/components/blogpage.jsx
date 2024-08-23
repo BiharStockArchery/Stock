@@ -33,7 +33,7 @@ const BlogPage = () => {
         {
             title: "Ola Electric IPO Success: Journey, Milestones, and Market Impact",
             description: "Ola Electric, a subsidiary of the ride-hailing giant Ola, has become a symbol of India's electric vehicle (EV) revolution.",
-            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724310017/OLA_t93aul.png",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724388956/olabanner_i8o1b7.jpg",
             route: "/ola", // Use route for sharing
         },
         {
