@@ -45,7 +45,7 @@ const BlogPage = () => {
         {
             title: "Stock Market Analysis During Festive Season",
             description: "Discover how the Indian stock market has performed during the festive seasons over the last five years.",
-            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724392937/INDIAN_STOCK_MARKET_1_jf3fls.png",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724401791/Add_a_heading_ctoegk.png",
             route: "/fest", // Use route for sharing
         },
     ];

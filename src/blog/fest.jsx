@@ -10,7 +10,7 @@ const styles = {
     overflowX: 'hidden',
   },
   header: {
-    backgroundImage: 'url(https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724393059/INDIAN_STOCK_MARKET_2_wjphwb.png)', // Replace with your image URL
+    backgroundImage: 'url(https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724401791/Add_a_heading_ctoegk.png)', // Replace with your image URL
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     color: 'white',
