@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faTelegram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { Helmet } from 'react-helmet'; // To manage the document head
+import { Helmet } from 'react-helmet';
 
 const BlogPage = () => {
     const posts = [
@@ -25,18 +25,19 @@ const BlogPage = () => {
         },
     ];
 
-    const handleShare = (platform, route, title) => {
+    const handleShare = (platform, route, title, imgUrl) => {
         const baseUrl = window.location.origin;
         const url = `${baseUrl}${route}`;
 
         const encodedUrl = encodeURIComponent(url);
         const encodedTitle = encodeURIComponent(title);
+        const encodedImgUrl = encodeURIComponent(imgUrl);
 
         let shareUrl = '';
 
         switch (platform) {
             case 'linkedin':
-                shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`;
+                shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}&summary=${encodedTitle}&source=${encodedUrl}&image=${encodedImgUrl}`;
                 break;
             case 'telegram':
                 shareUrl = `https://telegram.me/share/url?url=${encodedUrl}&text=${encodedTitle}`;
@@ -53,9 +54,15 @@ const BlogPage = () => {
 
     return (
         <div className="blog-page">
-            <Helmet>
-                <title>Blog Page</title>
-            </Helmet>
+            {posts.map((post, index) => (
+                <Helmet key={index}>
+                    <meta property="og:url" content={`${window.location.origin}${post.route}`} />
+                    <meta property="og:type" content="article" />
+                    <meta property="og:title" content={post.title} />
+                    <meta property="og:description" content={post.description} />
+                    <meta property="og:image" content={post.imgUrl} />
+                </Helmet>
+            ))}
 
             <style>
                 {`
@@ -183,28 +190,19 @@ const BlogPage = () => {
             <div className="container">
                 <div className="cards-container">
                     {posts.map((post, index) => (
-                        <React.Fragment key={index}>
-                            <Helmet>
-                                <meta property="og:url" content={`${window.location.origin}${post.route}`} />
-                                <meta property="og:type" content="article" />
-                                <meta property="og:title" content={post.title} />
-                                <meta property="og:description" content={post.description} />
-                                <meta property="og:image" content={post.imgUrl} />
-                            </Helmet>
-                            <a href={post.route} className="card">
-                                <img src={post.imgUrl} alt={post.title} className="card-image" />
-                                <div className="card-content">
-                                    <h3 className="card-title">{post.title}</h3>
-                                    <p className="card-description">{post.description}</p>
-                                    <span className="card-link">Read More</span>
-                                </div>
-                                <div className="share-icons">
-                                    <FontAwesomeIcon icon={faLinkedin} className="share-icon" onClick={() => handleShare('linkedin', post.route, post.title)} />
-                                    <FontAwesomeIcon icon={faTelegram} className="share-icon" onClick={() => handleShare('telegram', post.route, post.title)} />
-                                    <FontAwesomeIcon icon={faWhatsapp} className="share-icon" onClick={() => handleShare('whatsapp', post.route, post.title)} />
-                                </div>
-                            </a>
-                        </React.Fragment>
+                        <a href={post.route} className="card" key={index}>
+                            <img src={post.imgUrl} alt={post.title} className="card-image" />
+                            <div className="card-content">
+                                <h3 className="card-title">{post.title}</h3>
+                                <p className="card-description">{post.description}</p>
+                                <span className="card-link">Read More</span>
+                            </div>
+                            <div className="share-icons">
+                                <FontAwesomeIcon icon={faLinkedin} className="share-icon" onClick={() => handleShare('linkedin', post.route, post.title, post.imgUrl)} />
+                                <FontAwesomeIcon icon={faTelegram} className="share-icon" onClick={() => handleShare('telegram', post.route, post.title, post.imgUrl)} />
+                                <FontAwesomeIcon icon={faWhatsapp} className="share-icon" onClick={() => handleShare('whatsapp', post.route, post.title, post.imgUrl)} />
+                            </div>
+                        </a>
                     ))}
                 </div>
             </div>
