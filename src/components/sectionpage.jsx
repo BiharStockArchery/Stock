@@ -61,9 +61,7 @@ const Section = styled.div`
   }
 `;
 
-const RoundImage = styled.img.attrs(() => ({
-  loading: "lazy",
-}))`
+const RoundImage = styled.img`
   border-radius: 10px;
   width: 180px;  /* Fixed width */
   height: 160px; /* Fixed height */
