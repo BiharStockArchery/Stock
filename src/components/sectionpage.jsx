@@ -134,7 +134,7 @@ const SectionsPage = () => (
     <HorizontalLine />
     <Row>
       <SectionComponent
-        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724496751/11_klqorp.jpg"
+        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/t_Banner 16:9/v1724496751/11_klqorp.jpg"
         heading={<><strong>Real-Time Market Exposure</strong></>}
         text="Develop practical trading skills with immediate application in the live market."
       />
