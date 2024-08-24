@@ -62,7 +62,7 @@ const Contact = () => {
           padding: 1rem;
           border: 1px solid ${({ theme }) => theme.colors.yellow};
           border-radius: 5px;
-          font-size: 1rem;
+          font-size: 2rem;
           width: 100%;
           max-width: 100%;
         }
