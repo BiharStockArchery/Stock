@@ -10,13 +10,15 @@ export const GlobalStyle = createGlobalStyle`
 html {
   font-size: 62.5%;
   overflow-x: hidden;
-  background-color:#FFFFFF;
+  background-color: #FFFFFF;
+  scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 body {
   overflow-x: hidden;
   scrollbar-color: rgb(98 84 243);
   scrollbar-width: thin;
+  scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 body::-webkit-scrollbar {

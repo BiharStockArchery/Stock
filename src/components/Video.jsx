@@ -42,7 +42,7 @@ const TextContent = styled.div`
   margin: 0; /* Explicitly remove margin */
 
   h2 {
-    font-size: 5rem;
+    font-size: 4rem;
     color: #fff;
     margin: none; /* Remove margin */
     padding: none; /* Remove padding */
@@ -54,7 +54,7 @@ const TextContent = styled.div`
   }
 
   p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: justify;
     color: #FDD788;
    margin: 40px 0 0; 

@@ -41,7 +41,7 @@ const Section = styled.div`
     position: absolute;
     top: 8%;
     right: 0;
-    width: 0.5px; /* Ensure consistent vertical line width */
+    width: 0.5px;
     height: 90%;
     background-color: #febb12;
     display: block;
@@ -61,16 +61,18 @@ const Section = styled.div`
   }
 `;
 
-const RoundImage = styled.img`
-  border-radius: 20px;
-  width: 50%;
-  height: 50%;
-  object-fit: cover;
+const RoundImage = styled.img.attrs(() => ({
+  loading: "lazy",
+}))`
+  border-radius: 10px;
+  width: 180px;  /* Fixed width */
+  height: 160px; /* Fixed height */
+  object-fit: cover; /* Ensures image covers the entire container without distortion */
   margin-bottom: 10px;
 
   @media (max-width: 768px) {
-    width: 80%;
-    height: auto;
+    width: 80%;  /* Adjust width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
   }
 `;
 
@@ -100,7 +102,10 @@ const HorizontalLine = styled.hr`
 const SectionComponent = ({ image, heading, text }) => (
   <>
     <Section>
-      <RoundImage src={image} alt={heading} />
+      <RoundImage
+        src={image}
+        alt={heading}
+      />
       <Heading>{heading}</Heading>
       <Text>{text}</Text>
     </Section>
@@ -113,17 +118,17 @@ const SectionsPage = () => (
     <PageHeading><span>Our</span> Services</PageHeading>
     <Row>
       <SectionComponent
-        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152392/4th_-_Copy_bxcdbz.jpg"
+        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724496431/2_g78kj4.jpg"
         heading={<><strong>Bihar’s First Live Trading Institute</strong></>}
         text="The only institute in Bihar offering real-time trading classes, setting a new standard for stock market education."
       />
       <SectionComponent
-        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152392/2nd_s04uzo.jpg"
+        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724496430/3_pqjkss.jpg"
         heading={<><strong>Learn and Trade Simultaneously</strong></>}
         text="Students gain hands-on experience by learning and trading in a live market environment."
       />
       <SectionComponent
-        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152392/3rd_-_Copy_vredry.jpg"
+       image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724496431/4_igywfy.jpg"
         heading={<><strong>Expert Mentor Guidance</strong></>}
         text="Benefit from personalized instruction and proven strategies from seasoned trading professionals."
       />
@@ -131,19 +136,19 @@ const SectionsPage = () => (
     <HorizontalLine />
     <Row>
       <SectionComponent
-        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152390/1st_acbapn.jpg"
+        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724496751/11_klqorp.jpg"
         heading={<><strong>Real-Time Market Exposure</strong></>}
         text="Develop practical trading skills with immediate application in the live market."
       />
       <SectionComponent
-        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152393/5th_-_Copy_flkcme.jpg"
+        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724496439/6_jwqxco.jpg"
         heading={<><strong>Comprehensive Trading Experience</strong></>}
         text="A unique blend of theoretical knowledge and practical execution, ensuring well-rounded trading expertise."
       />
-       <SectionComponent
-        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152409/ind_-_Copy_pgb10b.jpg"
-        heading={<><strong>Interactive Learning Enviroment</strong></>}
-        text=" Engage in an energetic and collaborative setting where real-time discussions and peer interactions enhance the learning experience."
+      <SectionComponent
+        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724496435/Bihar_ex6eu7.jpg"
+        heading={<><strong>Interactive Learning Environment</strong></>}
+        text="Engage in an energetic and collaborative setting where real-time discussions and peer interactions enhance the learning experience."
       />
     </Row>
   </Container>

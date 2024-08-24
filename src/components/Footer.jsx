@@ -33,7 +33,7 @@ const Footer = () => {
           <div className="footer-about">
             <h3 id="footer-heading"><span className="stock">Stock</span> <span className="archery">Archery</span></h3>
             <a href="/" aria-label="Visit our homepage">
-              <p>Besides Babulal Sweets, Manik Sarkar Chowk, Adampur, Bhagalpur - 812001, Bihar.</p>
+              <p>Besides Babulal Sweets, Manik Sarkar Chowk, Adampur, Bhagalpur 812001, Bihar.</p>
             </a>
           </div>
 
@@ -134,7 +134,7 @@ const Wrapper = styled.section`
     h3 {
       color: ${({ theme }) => theme.colors.yellow};
       margin-bottom: 2.4rem;
-      font-size: 2.3rem;
+      font-size: 2rem;
     }
 
     .stock {
@@ -147,7 +147,7 @@ const Wrapper = styled.section`
 
     p {
       color: #febb12;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     .footer-social--icons {
@@ -155,7 +155,7 @@ const Wrapper = styled.section`
       gap: 2rem;
 
       .icons {
-        font-size: 2.4rem;
+        font-size: 2.0rem;
         color: inherit; /* Use color from parent element */
         cursor: pointer;
       }
