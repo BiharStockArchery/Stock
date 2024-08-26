@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './Home';
 import About from './About';
-import Services from './Services';
+
 import Contact from './Contact';
 import { ThemeProvider } from 'styled-components';
 import Review from './components/review';
@@ -52,7 +52,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/service" element={<Services />} />
+          
           <Route path="/contact" element={<Contact />} />
           <Route path="/review" element={<Review />} />
           <Route path="/video" element={<Video />} />

@@ -16,14 +16,13 @@ const styles = {
     color: 'white',
     padding: '30px 20px',
     width: '100%',
-    height: '280px',
+    height: '380px',
     minHeight: '198px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     textAlign: 'center',
     position: 'relative',
-    left: '2px',
-    right: '2px',
-    marginTop: '2px',
+    
+    marginBottom: '2px',
   },
   headerH1: {
     fontSize: '2.5em',

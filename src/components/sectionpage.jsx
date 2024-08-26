@@ -1,5 +1,12 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
+
+// No need to lazy load this component if it's the only one being used
+// const SectionComponent = lazy(() => {
+//   return new Promise(resolve => {
+//     setTimeout(() => resolve(import("./components/sectionpage")), 300);
+//   });
+// });
 
 const Container = styled.div`
   padding: 20px;
@@ -97,21 +104,22 @@ const HorizontalLine = styled.hr`
   }
 `;
 
-const SectionComponent = ({ image, heading, text }) => (
+const SectionComponent = memo(({ image, heading, text }) => (
   <>
     <Section>
       <RoundImage
         src={image}
         alt={heading}
+        loading="lazy" // Lazy load images
       />
       <Heading>{heading}</Heading>
       <Text>{text}</Text>
     </Section>
     <HorizontalLine />
   </>
-);
+));
 
-const SectionsPage = () => (
+const Sectionpage = () => (
   <Container id="sections-page">
     <PageHeading><span>Our</span> Services</PageHeading>
     <Row>
@@ -126,7 +134,7 @@ const SectionsPage = () => (
         text="Students gain hands-on experience by learning and trading in a live market environment."
       />
       <SectionComponent
-       image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724496431/4_igywfy.jpg"
+        image="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724496431/4_igywfy.jpg"
         heading={<><strong>Expert Mentor Guidance</strong></>}
         text="Benefit from personalized instruction and proven strategies from seasoned trading professionals."
       />
@@ -152,4 +160,4 @@ const SectionsPage = () => (
   </Container>
 );
 
-export default SectionsPage;
+export default Sectionpage;
