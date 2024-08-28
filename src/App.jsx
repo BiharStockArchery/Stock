@@ -19,6 +19,7 @@ import BlogPage from './components/blogpage';
 import Ola from './blog/ola';
 import Zerodha from './blog/ref';
 import Fest from './blog/fest';
+import It from './blog/it';  // Import the new component
 import { Helmet } from 'react-helmet';
 
 const theme = {
@@ -178,6 +179,15 @@ const App = () => {
                 <meta name="description" content="Analyze the stock market behavior during the festive seasons in our detailed blog post." />
               </Helmet>
               <Fest />
+            </>
+          } />
+          <Route path="/it" element={
+            <>
+              <Helmet>
+                <title>IT Stocks - Stock Archery</title>
+                <meta name="description" content="Explore IT stocks and understand their impact on the market." />
+              </Helmet>
+              <It />
             </>
           } />
           <Route path="*" element={<Navigate to="/" />} /> {/* Redirect to home page for all undefined routes */}
