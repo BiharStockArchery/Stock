@@ -69,18 +69,18 @@ const styles = {
       textDecoration: 'none',
       margin: '0 10px',
       fontSize: '24px',
-      color: '#007BFF', // Blue color for social icons
+      color: '#007BFF', 
       transition: 'color 0.3s ease, transform 0.3s ease',
     },
     socialIconHover: {
-      color: '#0056b3', // Darker blue for hover effect
+      color: '#0056b3', 
       transform: 'scale(1.2)',
     },
     socialIconInner: {
-      background: 'none', // Remove background
-      border: 'none', // Remove border
-      padding: '0', // Remove padding
-      borderRadius: '0', // Remove border radius
+      background: 'none',
+      border: 'none',
+      padding: '0', 
+      borderRadius: '0',
     },
   };
   
