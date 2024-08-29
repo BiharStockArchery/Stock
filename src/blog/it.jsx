@@ -6,7 +6,7 @@ const styles = {
       overflowX: 'hidden',
     },
     header: {
-      backgroundImage: 'url(https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724833335/Screenshot_15_xnb6le.png)', // Replace with your image URL
+      backgroundImage: 'url(https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724833335/Screenshot_15_xnb6le.png)',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       color: 'white',
@@ -48,7 +48,7 @@ const styles = {
       marginTop: '20px',
       marginBottom: '10px',
       fontWeight: 'bold',
-      textAlign: 'left', // Align text to the left
+      textAlign: 'left',
       transition: 'color 0.3s ease',
     },
     h2Hover: {
