@@ -25,7 +25,7 @@ const BlogPage = () => {
         {
             title: "IT Stocks Propel Nifty to Fresh All-Time High; Sensex Surges Over 250 Points",
             description: "The Indian stock market witnessed a significant surge today as the Nifty 50 index reached a fresh all-time high, driven primarily by gains in IT stocks. ",
-            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724833335/Screenshot_15_xnb6le.png",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724920780/Screenshot_16_oa5p7v.png",
             route: "/it",
         },
     ];
