@@ -15,7 +15,7 @@ const Footer = () => {
 
     try {
       const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
-      const docRef = await addDoc(collection(db, `submissions/${today}`), {
+      const docRef = await addDoc(collection(db, `submissions`), {
         phone
       });
       console.log("Document written with ID: ", docRef.id);
