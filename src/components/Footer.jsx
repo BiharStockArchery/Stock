@@ -1,13 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faInstagram, faYoutube, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-
+import { db, collection, addDoc } from './firebase';
 const Footer = () => {
+  const [phone, setPhone] = useState('');
+
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+      const docRef = await addDoc(collection(db, `submissions/${today}`), {
+        phone
+      });
+      console.log("Document written with ID: ", docRef.id);
+      setPhone(''); // Clear the input field after submission
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  };
+
   const phoneNumber = '+917485089391'; // Your phone number in international format
-  const message = encodeURIComponent('Hi, I was just checking out your website, and Im interested in learning more about your trading floor and live market sessions. Can you provide me with more details?'); // URL-encoded message
+  const message = encodeURIComponent('Hi, I was just checking out your website, and Im interested in learning more about your trading floor and live market sessions. Can you provide me with more details?');
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 
+
+
+  
   return (
     <Wrapper>
       <section className="contact-short" aria-labelledby="contact-short-heading">
@@ -40,18 +64,18 @@ const Footer = () => {
           {/* 2nd column */}
           <div className="footer-subscribe">
             <h3>Feel Free to Contact Us</h3>
-            <form action="https://formspree.io/f/mzzpddag" method="POST" aria-labelledby="subscribe-form-heading">
-              
-                <input
-                  id="phone-input"
-                  name="phone"
-                  type="tel"
-                  required
-                  autoComplete="off"
-                  placeholder="Phone number"
-                />
-                <input type="submit" value="Submit" aria-label="Submit subscription form" />
-              
+            <form onSubmit={handleSubmit} aria-labelledby="subscribe-form-heading">
+              <input
+                id="phone-input"
+                name="phone"
+                type="tel"
+                required
+                autoComplete="off"
+                placeholder="Phone number"
+                value={phone}
+                onChange={handlePhoneChange}
+              />
+              <input type="submit" value="Submit" aria-label="Submit subscription form" />
             </form>
           </div>
 
