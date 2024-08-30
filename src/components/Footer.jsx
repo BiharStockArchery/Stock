@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faInstagram, faYoutube, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { db, collection, addDoc } from './firebase2';
+import { db, collection, addDoc } from './firebase';
 const Footer = () => {
   const [phone, setPhone] = useState('');
 
