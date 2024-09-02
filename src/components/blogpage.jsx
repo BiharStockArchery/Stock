@@ -28,6 +28,13 @@ const BlogPage = () => {
             imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724920780/Screenshot_16_oa5p7v.png",
             route: "/it",
         },
+
+        {
+            title: "The Impact of Bajaj Housing Finance’s Rs 6,500 Crore IPO Announcement",
+            description: "Bajaj Finance and Bajaj Finserv Surge by 5% on September 2nd: The Impact of Bajaj Housing Finance’s Rs 6,500 Crore IPO Announcement",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724920780/Screenshot_16_oa5p7v.png",
+            route: "/it",
+        },
     ];
 
     const handleShare = (platform, route, title, imgUrl) => {
@@ -59,122 +66,129 @@ const BlogPage = () => {
 
     return (
         <div className="blog-page">
-            <style>
-                {`
-                /* General Styles */
-                body {
-                    font-family: Arial, sans-serif;
-                    margin: 0;
-                    padding: 0;
-                }
+<style>
+    {`
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
 
-                .container {
-                    width: 100%;
-                    max-width: 100%;
-                    margin: 0 auto;
-                    padding: 20px;
-                    background: rgba(37, 37, 37, 255);
-                }
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgba(37, 37, 37, 255);
+    }
 
-                /* Hero Section Styles */
-                .hero {
-                    color: black;
-                    text-align: center;
-                    background: rgba(37, 37, 37, 255);
-                }
+    /* Hero Section Styles */
+    .hero {
+        color: black;
+        text-align: center;
+        background: rgba(37, 37, 37, 255);
+    }
 
-                .hero h2 {
-                    font-size: 3.5rem;
-                    margin: 0;
-                    color: #febb12;
-                }
+    .hero h2 {
+        font-size: 3.5rem;
+        margin: 0;
+        color: #febb12;
+    }
 
-                .hero p {
-                    font-size: 2rem;
-                    margin: 10px 0 0;
-                }
+    .hero p {
+        font-size: 2rem;
+        margin: 10px 0 0;
+    }
 
-                /* Cards Container Styles */
-                .cards-container {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                    gap: 20px;
-                }
+    /* Cards Container Styles */
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
 
-                .card {
-                    background: white;
-                    border-radius: 10px;
-                    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-                    overflow: hidden;
-                    transition: transform 0.3s ease, box-shadow 0.3s ease;
-                    text-decoration: none;
-                    color: #febb12;
-                    position: relative;
-                }
+    @media (min-width: 1024px) {
+        .cards-container {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
 
-                .card:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-                }
+    .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-decoration: none;
+        color: #febb12;
+        position: relative;
+    }
 
-                .card-image {
-                    width: 100%;
-                    height: 200px;
-                    object-fit: cover;
-                }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
 
-                .card-content {
-                    padding: 20px;
-                }
+    .card-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
 
-                .card-title {
-                    font-size: 2rem;
-                    margin: 0 0 10px;
-                    font-weight: bold;
-                }
+    .card-content {
+        padding: 20px;
+    }
 
-                .card-description {
-                    font-size: 1.5rem;
-                    margin: 0;
-                    color: #000000;
-                    font-weight: bold;
-                }
+    .card-title {
+        font-size: 2rem;
+        margin: 0 0 10px;
+        font-weight: bold;
+    }
 
-                .card-link {
-                    display: block;
-                    margin-top: 15px;
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                    color: #febb12;
-                    text-decoration: none;
-                    transition: color 0.3s ease;
-                }
+    .card-description {
+        font-size: 1.5rem;
+        margin: 0;
+        color: #000000;
+        font-weight: bold;
+    }
 
-                .card-link:hover {
-                    color: #0056b3;
-                }
+    .card-link {
+        display: block;
+        margin-top: 15px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #febb12;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
 
-                .share-icons {
-                    display: flex;
-                    justify-content: flex-end;
-                    gap: 10px;
-                    position: absolute;
-                    bottom: 20px;
-                    right: 20px;
-                }
+    .card-link:hover {
+        color: #0056b3;
+    }
 
-                .share-icon {
-                    font-size: 3rem;
-                    cursor: pointer;
-                    color: #0056b3;
-                    transition: color 0.3s ease;
-                }
+    .share-icons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
 
-                .share-icon:hover {
-                    color: #0056b3;
-                }
-                `}
-            </style>
+    .share-icon {
+        font-size: 3rem;
+        cursor: pointer;
+        color: #0056b3;
+        transition: color 0.3s ease;
+    }
+
+    .share-icon:hover {
+        color: #0056b3;
+    }
+    `}
+</style>
+
 
             <section className="hero">
                 <div className="container">
