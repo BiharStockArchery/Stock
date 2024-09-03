@@ -6,7 +6,7 @@ const Blog = () => {
         <div style={styles.blogContainer}>
             <h1 className="animated-heading">Bajaj Stocks Surge Following Recent IPO Announcement</h1>
             <div style={styles.post}>
-                <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725350565/1_rnqkbb.png" alt="Bajaj Stocks Surge" style={styles.postImage} />
+                <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725361124/Screenshot_25_jqc6ai.png" alt="Bajaj Stocks Surge" style={styles.postImage} />
 
                 <h2 className="subheading">The Impact of Bajaj's IPO Announcement</h2>
                 <p style={styles.postText}>
