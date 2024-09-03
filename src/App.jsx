@@ -21,6 +21,7 @@ import Zerodha from './blog/ref';
 import Fest from './blog/fest';
 import It from './blog/it';  // Import the new component
 import { Helmet } from 'react-helmet';
+import Bj from './blog/bj';
 
 const theme = {
   colors: {
@@ -188,6 +189,16 @@ const App = () => {
                 <meta name="description" content="Explore IT stocks and understand their impact on the market." />
               </Helmet>
               <It />
+            </>
+          } />
+
+<Route path="/bj" element={
+            <>
+              <Helmet>
+                <title>Bjaj finance</title>
+                <meta name="description" content="bjaj finace recent surge" />
+              </Helmet>
+              <Bj />
             </>
           } />
           <Route path="*" element={<Navigate to="/" />} /> {/* Redirect to home page for all undefined routes */}

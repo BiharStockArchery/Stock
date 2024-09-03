@@ -33,7 +33,7 @@ const BlogPage = () => {
             title: "The Impact of Bajaj Housing Finance’s Rs 6,500 Crore IPO Announcement",
             description: "Bajaj Finance and Bajaj Finserv Surge by 5% on September 2nd: The Impact of Bajaj Housing Finance’s Rs 6,500 Crore IPO Announcement",
             imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724920780/Screenshot_16_oa5p7v.png",
-            route: "/it",
+            route: "/bj",
         },
     ];
 
