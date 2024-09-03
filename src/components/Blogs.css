@@ -2,7 +2,7 @@
 
 .animated-heading {
     font-family: 'Nerko One', cursive;
-    font-size: 3rem;
+    font-size: 4rem;
     color: #ff6347; /* Tomato color */
     margin-bottom: 30px;
     opacity: 0;
@@ -43,7 +43,7 @@
 
 .subheading {
     font-family: 'Nerko One', cursive;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-top: 30px;
     margin-bottom: 15px;
     text-align: left;

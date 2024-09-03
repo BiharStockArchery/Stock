@@ -62,7 +62,7 @@ const styles = {
         marginBottom: '20px',
     },
     postText: {
-        fontSize: '1rem',
+        fontSize: '2rem',
         color: '#555',
         lineHeight: '1.6',
         marginBottom: '20px',
