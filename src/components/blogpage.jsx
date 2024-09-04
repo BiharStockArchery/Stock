@@ -19,8 +19,8 @@ const BlogPage = () => {
         {
             title: "Stock Market Analysis During Festive Season",
             description: "Discover how the Indian stock market has performed during the festive seasons over the last five years.",
-            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724401791/Add_a_heading_ctoegk.png",
-            route: "/fest",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725431242/334-removebg-preview_ezjbws.png",
+            route: "/festival",
         },
         {
             title: "IT Stocks Propel Nifty to Fresh All-Time High; Sensex Surges Over 250 Points",

@@ -18,9 +18,8 @@ import SectionsPage from './components/sectionpage';
 import BlogPage from './components/blogpage';
 import Ola from './blog/ola';
 import Zerodha from './blog/ref';
-import Fest from './blog/fest';
-import It from './blog/it';  // Import the new component
-import { Helmet } from 'react-helmet';
+import Fest from './blog/festival';
+import It from './blog/it';  
 import Bj from './blog/bjaj';
 
 const theme = {
@@ -49,159 +48,25 @@ const App = () => {
       <GlobalStyle />
       <WhatsAppButton />
       <BrowserRouter>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Stock Archery - Your Go-To for Live Trading Classes</title>
-          <meta name="description" content="Join Stock Archery for the best live trading classes. Learn to trade in a real market setting with expert guidance." />
-        </Helmet>
         <Header />
         <Routes>
-          <Route path="/" element={
-            <>
-              <Helmet>
-                <title>Home - Stock Archery</title>
-                <meta name="description" content="Welcome to Stock Archery. Learn to trade with live classes and expert guidance." />
-              </Helmet>
-              <Home />
-            </>
-          } />
-          <Route path="/about" element={
-            <>
-              <Helmet>
-                <title>About Us - Stock Archery</title>
-                <meta name="description" content="Learn more about Stock Archery and our mission to provide quality trading education." />
-              </Helmet>
-              <About />
-            </>
-          } />
-          <Route path="/contact" element={
-            <>
-              <Helmet>
-                <title>Contact Us - Stock Archery</title>
-                <meta name="description" content="Get in touch with Stock Archery for any inquiries or support." />
-              </Helmet>
-              <Contact />
-            </>
-          } />
-          <Route path="/review" element={
-            <>
-              <Helmet>
-                <title>Student Reviews - Stock Archery</title>
-                <meta name="description" content="Read what our students have to say about their experience at Stock Archery." />
-              </Helmet>
-              <Review />
-            </>
-          } />
-          <Route path="/video" element={
-            <>
-              <Helmet>
-                <title>Videos - Stock Archery</title>
-                <meta name="description" content="Watch our educational videos and learn from our experts." />
-              </Helmet>
-              <Video />
-            </>
-          } />
-          <Route path="/FAQ" element={
-            <>
-              <Helmet>
-                <title>FAQ - Stock Archery</title>
-                <meta name="description" content="Find answers to the most frequently asked questions about Stock Archery." />
-              </Helmet>
-              <FAQ />
-            </>
-          } />
-          <Route path="/blog" element={
-            <>
-              <Helmet>
-                <title>Blog - Stock Archery</title>
-                <meta name="description" content="Read our latest blog posts on trading strategies, market analysis, and more." />
-              </Helmet>
-              <BlogPage />
-            </>
-          } />
-          <Route path="/content" element={
-            <>
-              <Helmet>
-                <title>Content - Stock Archery</title>
-                <meta name="description" content="Explore our educational content and trading resources." />
-              </Helmet>
-              <Content />
-            </>
-          } />
-          <Route path="/testimonial" element={
-            <>
-              <Helmet>
-                <title>Testimonials - Stock Archery</title>
-                <meta name="description" content="See what our students are saying about their learning experience at Stock Archery." />
-              </Helmet>
-              <Testimonials />
-            </>
-          } />
-          <Route path="/new" element={
-            <>
-              <Helmet>
-                <title>What's New - Stock Archery</title>
-                <meta name="description" content="Stay updated with the latest news and updates from Stock Archery." />
-              </Helmet>
-              <New />
-            </>
-          } />
-          <Route path="/sect" element={
-            <>
-              <Helmet>
-                <title>Sections - Stock Archery</title>
-                <meta name="description" content="Explore the various sections and resources available at Stock Archery." />
-              </Helmet>
-              <SectionsPage />
-            </>
-          } />
-          <Route path="/ola" element={
-            <>
-              <Helmet>
-                <title>Ola Electric - Blog - Stock Archery</title>
-                <meta name="description" content="Read our comprehensive blog on the history and growth of Ola Electric." />
-              </Helmet>
-              <Ola />
-            </>
-          } />
-          <Route path="/ref" element={
-            <>
-              <Helmet>
-                <title>Zerodha Referral Program - Blog - Stock Archery</title>
-                <meta name="description" content="Understand the implications of Zerodha's cancellation of its referral program in our latest blog." />
-              </Helmet>
-              <Zerodha />
-            </>
-          } />
-          <Route path="/fest" element={
-            <>
-              <Helmet>
-                <title>Festive Season Stock Market Analysis - Blog - Stock Archery</title>
-                <meta name="description" content="Analyze the stock market behavior during the festive seasons in our detailed blog post." />
-              </Helmet>
-              <Fest />
-            </>
-          } />
-          <Route path="/it" element={
-            <>
-              <Helmet>
-                <title>IT Stocks - Stock Archery</title>
-                <meta name="description" content="Explore IT stocks and understand their impact on the market." />
-              </Helmet>
-              <It />
-            </>
-          } />
-
-<Route path="/bj" element={
-            <>
-              <Helmet>
-                <title>Bjaj finance</title>
-                <meta name="description" content="bjaj finace recent surge" />
-              </Helmet>
-              <Bj />
-            </>
-          } />
-          <Route path="*" element={<Navigate to="/" />} /> {/* Redirect to home page for all undefined routes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/review" element={<Review />} />
+          <Route path="/video" element={<Video />} />
+          <Route path="/FAQ" element={<FAQ />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/content" element={<Content />} />
+          <Route path="/testimonial" element={<Testimonials />} />
+          <Route path="/new" element={<New />} />
+          <Route path="/sect" element={<SectionsPage />} />
+          <Route path="/ola" element={<Ola />} />
+          <Route path="/ref" element={<Zerodha />} />
+          <Route path="/festival" element={<Fest />} />
+          <Route path="/it" element={<It />} />
+          <Route path="/bj" element={<Bj />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
       </BrowserRouter>
