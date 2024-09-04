@@ -21,7 +21,7 @@ import Zerodha from './blog/ref';
 import Fest from './blog/fest';
 import It from './blog/it';  // Import the new component
 import { Helmet } from 'react-helmet';
-import Bj from './blog/bj';
+import Bj from './blog/bjaj';
 
 const theme = {
   colors: {
