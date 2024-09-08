@@ -21,6 +21,7 @@ import Zerodha from './blog/ref';
 import Fest from './blog/festival';
 import It from './blog/it';  
 import Bj from './blog/bjaj';
+import Bj2 from './blog/bjaj2';
 
 const theme = {
   colors: {
@@ -66,6 +67,7 @@ const App = () => {
           <Route path="/festival" element={<Fest />} />
           <Route path="/it" element={<It />} />
           <Route path="/bj" element={<Bj />} />
+          <Route path="/bj2" element={<Bj2 />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />

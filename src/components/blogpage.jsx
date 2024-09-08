@@ -35,6 +35,13 @@ const BlogPage = () => {
             imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725353763/5_drivgt.jpg",
             route: "/bj",
         },
+
+        {
+            title: "Bajaj Housing Finance IPO",
+            description: "The recent announcement of an Initial Public Offering (IPO) by Bajaj has led to a significant surge in the company's stock prices",
+            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725792949/Bajaj-Housing-Finance-IPO-Price-Set-at-_66-70-Per-Share-IW-News-Title-removebg-preview_q15hyc.png",
+            route: "/bj2",
+        },
     ];
 
     const handleShare = (platform, route, title, imgUrl) => {

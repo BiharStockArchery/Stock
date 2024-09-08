@@ -2,11 +2,7 @@ import { useEffect } from "react";
 import HeroSection from "./components/HeroSection";
 import { useGlobalContext } from "./context";
 import Video from "./components/Video";
-
 import SectionsPage from "./components/sectionpage";
-
-
-
 
 
 const Home = () => {
@@ -18,14 +14,7 @@ const Home = () => {
     <>
       <HeroSection /> 
       <Video/>
-      <SectionsPage/>
-  
-
-     
-     
-     
-      
-      
+      <SectionsPage/>  
     </>
   );
 };
