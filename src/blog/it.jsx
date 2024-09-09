@@ -164,7 +164,7 @@ const BlogPage = () => {
             ⭐<strong>Sensex Gains Over 250 Points:</strong> The Sensex followed suit, gaining over 250 points. This rise is indicative of a broader market rally, with several sectors contributing to the positive momentum, though IT remains the standout performer.
           </p>
           <p style={styles.p}>
-            ⭐<strong>Strong Performance of IT Stocks:</strong>  Leading IT companies like TCS, Infosys, and Wipro were among the top gainers in today’s trade. The sector’s growth can be attributed to several factors, including robust quarterly earnings, positive outlooks, and increasing demand for IT services globally.
+            ⭐<strong>Strong Performance of IT Stocks:</strong>Leading IT companies like TCS, Infosys, and Wipro were among the top gainers in today’s trade. The sector’s growth can be attributed to several factors, including robust quarterly earnings, positive outlooks, and increasing demand for IT services globally.
           </p>
         </section>
 

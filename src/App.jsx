@@ -66,8 +66,8 @@ const App = () => {
           <Route path="/ref" element={<Zerodha />} />
           <Route path="/festival" element={<Fest />} />
           <Route path="/it" element={<It />} />
-          <Route path="/bj" element={<Bj />} />
-          <Route path="/bj2" element={<Bj2 />} />
+          <Route path="/bjaj" element={<Bj />} />
+          <Route path="/bjaj2" element={<Bj2 />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />

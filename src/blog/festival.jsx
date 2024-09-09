@@ -35,7 +35,6 @@ const Fest = () => {
                 <p style={styles.postText}>
                 The Indian economy is expected to continue its growth trajectory, with GDP growth estimates ranging between 6-7% for the year. A strong economic backdrop generally supports positive market sentiment during the festive season. Inflation has been relatively stable, but any unexpected spikes could influence consumer spending and market performance. The Reserve Bank of India's monetary policy will play a crucial role in maintaining this balance.The earnings season leading up to the festive period will be critical. Strong corporate results could fuel a pre-festive rally, while any disappointments might temper expectations.
                 </p>
-
                 <h2 className="subheading">Conclusion: Investing During the Festive Season</h2>
                 <p style={styles.postText}>
                     <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725431425/Screenshot__26_-removebg-preview_mj8wnf.png" alt="Investment" className="inline-image" />
