@@ -6,7 +6,7 @@ const reviews = [
     name: "Dhiraj Kumar",
     review: "Prem sir ka experience aur energetic class environment se maine live trading mein confidence paya. Standoff strategies bahut helpful hain.",
     rating: 5,
-    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725947891/IMG_1438_1_m6qfvj.jpg"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725949623/IMG_1438_1_-fotor-20240910115056_gxllgu.png"
   },
   {
     name: "Shahwaz Alam",
