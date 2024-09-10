@@ -18,32 +18,32 @@ const reviews = [
     name: "Vaibhav",
     review: "Live market mein trading ka experience anokha tha. Ankit sir, Prem sir, aur Prabhas sir ke guidance meinmaine kaafi kuch seekha.",
     rating: 5,
-    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725947889/IMG_1437_1_gfmoof.jpg"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725949620/IMG_1437_1_-fotor-20240910115027_gsn1sa.png"
   },
   {
     name: "Rohan Kumar",
     review: "I am thankful to have found Prem on Instagram, conducting live market classes from Bihar. Stock Archery real-time sessions are insightful and interactive, offering a thorough understanding of market dynamics.",
     rating: 5,
-    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725947885/IMG_1436_1_xjq2ud.jpg"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725949623/IMG_1438_1_-fotor-20240910115056_gxllgu.png"
   },
   {
     name: "Deepak Kumar",
     review: "Stock Archery ne mujhe trading ke basics aur advanced dono level pe mahir banaya. Bhagalpur jaise chote sheher mein aisa platform milna sach mein incredible ha",
     rating: 5,
-    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152417/student6_xplvbd.png"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725949632/IMG_1435_1_-fotor-20240910114920_zyw0qu.png"
   },
   {
     name: "Prabhat",
     review: "Stock Archery ke live classes kamaal ki hain! Real-time market ke sath trading seekhne ka maza hi kuch aur hai. Professionals ke sath trade karke bahut kuch naya seekhne ko mila. Bahut helpful aur informative sessions hain. Highly recommended.",
     rating: 5,
-    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725947884/IMG_1435_1_hamdds.jpg"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725949620/IMG_1436_1_-fotor-20240910114957_i2uawi.png"
   },
   
   {
     name: "Dhiraj Ghosh",
     review: "Real-time trading se confidence badta hai aur strategies ko easily implement karne ka mauka milta hai. Instructors bhi bahut supportive hain. Ideal for trading beginners and experts alike!.",
     rating: 5,
-    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725947883/IMG_1434_1_dhc2vl.jpg"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725949622/fotor-2024091011483_bkic9l.png"
   },
 ];
 
