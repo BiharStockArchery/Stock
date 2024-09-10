@@ -24,7 +24,7 @@ const reviews = [
     name: "Rohan Kumar",
     review: "I am thankful to have found Prem on Instagram, conducting live market classes from Bihar. Stock Archery real-time sessions are insightful and interactive, offering a thorough understanding of market dynamics.",
     rating: 5,
-    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725949623/IMG_1438_1_-fotor-20240910115056_gxllgu.png"
+    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725947885/IMG_1436_1_xjq2ud.jpg"
   },
   {
     name: "Deepak Kumar",
