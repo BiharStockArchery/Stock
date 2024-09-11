@@ -31,7 +31,7 @@ const AppProvider = ({ children }) => {
       type: "ABOUT_UPDATE",
       payload: {
         name: "Bihar's First Trading Floor",
-        image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152394/about1_sz1ch8.svg",
+        image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1726053452/Screenshot__31_-removebg-preview_goyx1t.png",
         paragraph: "Introducing Stock Archery's  live trading classes—where education meets real-time trading. Gain hands-on experience and practical skills in our interactive sessions. Elevate your trading expertise with our unique, live-learning approach. Join now and experience the future of trading education",
       },
     });
