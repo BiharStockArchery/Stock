@@ -147,7 +147,7 @@ const TeachersList = () => {
      
       subject: "Prem Sandesh",
       bio: "With over eight years of experience in price action trading and a specialization in swing trades, I offer unparalleled expertise in market dynamics. My mission is to equip aspiring traders with essential insights and skills for confident, profitable market navigation. Discover comprehensive strategies and practical techniques tailored for success. Join me to enhance your trading skills and achieve remarkable results in the ever-evolving financial markets.",
-      image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152410/prem_jdeoi6.jpg",
+      image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/t_Profile/v1726052942/Screenshot_30_fbcyw9.png",
       linkedin: "https://www.linkedin.com/in/prem-sandesh-b29927289/",
       twitter: "https://x.com/stockarchery",
       instagram: "https://www.instagram.com/stock.archery/",
