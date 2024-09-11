@@ -45,13 +45,8 @@ const reviews = [
     review: "Real-time trading se self-belief badh jaata hai aur strategies ko aasan se apply karne ka moka milta hai. Instructors bhi kaafi helpful hain. Beginners aur experts dono ke liye yeh perfect platform hai",
     rating: 5,
     image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725950247/fotor-202409101271_l8tdbd.png"
-  },
-  {
-    name: "Abhinish Kumar",
-    review: "Real-time trading se self-belief badh jaata hai aur strategies ko aasan se apply karne ka moka milta hai. Instructors bhi kaafi helpful hain. Beginners aur experts dono ke liye yeh perfect platform hai",
-    rating: 5,
-    image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1725950247/fotor-202409101271_l8tdbd.png"
   }
+ 
 ];
 
 const StudentReviews = () => {
