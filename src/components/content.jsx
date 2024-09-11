@@ -202,7 +202,7 @@ const AboutPage = () => {
 
       <div style={containerStyle}>
         <section style={headerStyle}>
-          <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152394/about1_sz1ch8.svg" alt="About Stock Archery" style={imageStyle} />
+          <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1726053452/Screenshot__31_-removebg-preview_goyx1t.png" alt="About Stock Archery" style={imageStyle} />
           <div style={textContainerStyle}>
             <h1 style={titleStyle}>
               <span style={whiteTextStyle}>ABOUT</span> US
