@@ -156,7 +156,7 @@ const TeachersList = () => {
       
       subject: "Kumar Ankit",
       bio: "Hello, I'm Kumar Ankit, your dedicated mentor—Certified Researcher, Trader, and Financial Advisor with nearly a decade of market experience. With my extensive expertise, I emphasize that mastering a single trading setup can lead to significant success in the stock market. My mission is to guide you in discovering that pivotal setup, ensuring you have the tools and knowledge needed to excel. Join me to unlock your trading potential and achieve financial success with proven strategies and personalized support. See you soon on your path to market mastery!",
-      image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152394/ankit_-_Copy_eytbng.jpg",
+      image: "https://res.cloudinary.com/dyrn2eg1j/image/upload/t_Profile/v1724152394/ankit_mwv8wb.png",
       linkedin: "https://www.linkedin.com/in/kumar-ankit-964823323/",
       twitter: "https://x.com/stockarchery",
       instagram: "https://www.instagram.com/stock.archery/",
