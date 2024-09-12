@@ -183,7 +183,7 @@ const AboutPage = () => {
     {
       title: '1 Year Handhold Support',
       text: 'We actively engage with and support our local communities through various initiatives and partnerships.',
-      image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1724152389/1st_-_Copy_iarhze.jpg',
+      image: 'https://res.cloudinary.com/dyrn2eg1j/image/upload/v1726124281/12343_sobrul.webp',
       backText: 'Enjoy a full year of dedicated support with our comprehensive trading program, designed to keep you on track with your trading goals and ensure continuous progress. Our year-long support package offers you ongoing access to expert guidance, personalized feedback, and strategic insights tailored to your evolving needs.',
     },
   ];
