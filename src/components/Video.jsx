@@ -71,7 +71,7 @@ const Video = () => {
     <Container>
       <VideoWrapper>
         <iframe
-          src="https://www.youtube.com/embed/LVwW3hasMjw"
+          src="https://www.youtube.com/embed/Tr0C3r2m-eI"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
