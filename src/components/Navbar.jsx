@@ -8,6 +8,9 @@ const Navbar = () => {
 
   return (
     <Nav role="navigation" aria-label="Main Navigation">
+      {/* Overlay effect when the menu is open */}
+      <div className={`overlay ${openMenu ? 'active' : ''}`} onClick={() => setOpenMenu(false)}></div>
+
       <div className="menuIcon">
         <div
           className="mobile-navbar-btn"
@@ -27,6 +30,7 @@ const Navbar = () => {
             />
           )}
         </div>
+
         <ul className={`navbar-list ${openMenu ? 'active' : ''}`} role="menubar">
           <li role="none">
             <NavLink
@@ -50,7 +54,6 @@ const Navbar = () => {
               About
             </NavLink>
           </li>
-         
           <li role="none">
             <NavLink
               className="navbar-link"
@@ -62,7 +65,6 @@ const Navbar = () => {
               Testimonials
             </NavLink>
           </li>
-        
           <li role="none">
             <NavLink
               className="navbar-link"
@@ -74,26 +76,24 @@ const Navbar = () => {
               Contact
             </NavLink>
           </li>
-
           <li role="none">
             <NavLink
               className="navbar-link"
               onClick={() => setOpenMenu(false)}
               to="/blog"
               role="menuitem"
-              aria-label="Contact Us"
+              aria-label="Blogs"
             >
               Blogs
             </NavLink>
           </li>
-         
           <li role="none">
             <NavLink
               className="navbar-link"
               onClick={() => setOpenMenu(false)}
               to="/FAQ"
               role="menuitem"
-              aria-label="Frequently Asked Questions"
+              aria-label="FAQ"
             >
               FAQ
             </NavLink>
@@ -105,6 +105,7 @@ const Navbar = () => {
 };
 
 const Nav = styled.nav`
+  /* Main container for the menu */
   .menuIcon {
     display: flex;
     justify-content: space-between;
@@ -114,8 +115,10 @@ const Nav = styled.nav`
     box-sizing: border-box;
     width: 100%;
     position: relative;
+    z-index: 1001;
   }
 
+  /* Basic styling for desktop view */
   .navbar-list {
     display: flex;
     gap: 1.5rem;
@@ -127,27 +130,28 @@ const Nav = styled.nav`
         &:visited {
           display: inline-block;
           text-decoration: none;
-          font-size: 2rem;
-          text-transform: uppercase;
-          color: #febb12;
-          transition: color 0.3s linear;
+          font-size: 1.8rem;
+          font-weight: bold;
+          color: #fff;
+          transition: color 0.3s ease;
         }
 
         &:hover,
         &:active {
-          color: #e9e12b;
+          color: #ffcc00;
         }
       }
     }
   }
 
+  /* Hidden by default in desktop view */
   .mobile-navbar-btn {
     display: none;
 
     .mobile-nav-icon {
-      font-size: 4rem; /* Adjusted size */
+      font-size: 4rem;
       cursor: pointer;
-      color: #febb12; /* Set icon color to yellow */
+      color: #febb12;
       transition: color 0.3s ease;
     }
 
@@ -155,23 +159,43 @@ const Nav = styled.nav`
       position: fixed;
       top: 1.5rem;
       right: 1.5rem;
-      z-index: 10001; /* Ensure the close icon is above other elements */
+      z-index: 10001;
     }
   }
 
+  /* Overlay that dims the background when the menu is open */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+  }
+
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Responsive styling for mobile view */
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     .mobile-navbar-btn {
       display: block;
-      color: #FDD788;
     }
 
+    /* Full-screen mobile view menu */
     .navbar-list {
       position: fixed;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
-      background-color: #252525;
+      background-color: rgba(37, 37, 37, 0.95);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -179,28 +203,28 @@ const Nav = styled.nav`
       gap: 2rem;
       padding: 0;
       margin: 0;
-      transform: translateX(100%);
+      transform: translateY(-100%);
       opacity: 0;
       visibility: hidden;
-      transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+      transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+      z-index: 10000;
     }
 
+    /* Show menu when active */
     .navbar-list.active {
-      transform: translateX(0);
+      transform: translateY(0);
       opacity: 1;
       visibility: visible;
-      z-index: 9999;
-      background-color: #252525;
-      font-size: 5rem;
     }
 
-    .menuIcon {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    /* Styling for navbar links in mobile view */
+    .navbar-link {
+      font-size: 2.5rem;
+      color: #ffcc00;
+      text-transform: uppercase;
     }
 
+    /* Ensure the menu icon appears */
     .mobile-navbar-btn .mobile-nav-icon {
       display: block;
     }
