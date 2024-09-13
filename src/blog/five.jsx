@@ -4,7 +4,7 @@ import '../components/Blogs.css';
 const Blog = () => {
     return (
         <div style={styles.blogContainer}>
-            <h1 className="animated-heading">Five Things You Should Learn Fast, or the Market Will Make You Learn in Its Own Way</h1>
+            <h1 className="animated-heading">Five Things You Should Learn Fast, or the Market Will Make You Learn in Its Own Way❓</h1>
             <p style={styles.postText}>
             The stock market is an incredible platform for wealth creation, but it's also a place where overconfidence and poor decision-making can lead to significant losses. Many traders and investors start their journey thinking they can outsmart the market, but reality soon sets in. The market is not a casino; it's a disciplined game of strategy, patience, and resilience. Here are five crucial lessons every trader and investor must internalize to succeed in the stock market.
             </p>
@@ -20,7 +20,7 @@ const Blog = () => {
 
                 <h2 className="subheading">Lesson:</h2>
                 <p style={styles.postText}>
-                Focus on discipline, strategy, and risk management rather than trying to beat the market. It’s essential to accept that market fluctuations are inevitable, and you can only control your responses to them, not the market itself.
+                ⏩Focus on discipline, strategy, and risk management rather than trying to beat the market. It’s essential to accept that market fluctuations are inevitable, and you can only control your responses to them, not the market itself.
             <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1726208591/Screenshot_36_jx5yb5.png" alt="IPO" className="inline-image right-image" />
                 </p>
 
@@ -31,7 +31,7 @@ const Blog = () => {
                 </p>
                 <h2 className="subheading">Lesson:</h2>
                 <p style={styles.postText}>
-                Treat the stock market as a disciplined investment platform. Informed decisions, backed by analysis and research, will always outperform speculative behavior and gambling-like trades.
+                ⏩Treat the stock market as a disciplined investment platform. Informed decisions, backed by analysis and research, will always outperform speculative behavior and gambling-like trades.
            
                 </p>
 
@@ -41,7 +41,7 @@ const Blog = () => {
                 </p>
                 <h2 className="subheading">Lesson:</h2>
                 <p style={styles.postText}>
-                The stock market can be a great supplementary source of income, but going full-time requires years of experience and a solid financial backup plan. Consider keeping trading as a secondary income until you’re consistently outperforming your main job
+                ⏩The stock market can be a great supplementary source of income, but going full-time requires years of experience and a solid financial backup plan. Consider keeping trading as a secondary income until you’re consistently outperforming your main job
            
                 </p>
 
@@ -52,7 +52,7 @@ const Blog = () => {
                 </p>
                 <h2 className="subheading">Lesson:</h2>
                 <p style={styles.postText}>
-                :** Avoid following stock tips blindly. Instead, focus on building your own knowledge and strategies, backed by solid research and analysis
+                ⏩Avoid following stock tips blindly. Instead, focus on building your own knowledge and strategies, backed by solid research and analysis
            
                 </p>
 
@@ -62,7 +62,7 @@ const Blog = () => {
                 </p>
                 <h2 className="subheading">Lesson:</h2>
                 <p style={styles.postText}>
-                Don’t get disheartened if your portfolio lags in a bullish market. Focus on your long-term strategy and resist the urge to chase quick gains, as the market will eventually reward well-researched investments.
+                ⏩ Don’t get disheartened if your portfolio lags in a bullish market. Focus on your long-term strategy and resist the urge to chase quick gains, as the market will eventually reward well-researched investments.
                 </p>
                 <h2 className="subheading">Conclusion: The Market Teaches Tough Lessons</h2>
                 <p style={styles.postText}>
