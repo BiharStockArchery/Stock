@@ -45,7 +45,7 @@ const BlogPage = () => {
         {
             title: "Five Things To Learn In stock Market",
             description: "Five Things you should learn fast or market will make you learn in its own way",
-            imgUrl: "https://res.cloudinary.com/dyrn2eg1j/image/upload/v1726208100/Screenshot__34_-removebg-preview_rcrrsj.png",
+            imgUrl: "./images/9.gif",
             route: "/five",
         },
     ];

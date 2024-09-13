@@ -9,7 +9,7 @@ const Blog = () => {
             The stock market is an incredible platform for wealth creation, but it's also a place where overconfidence and poor decision-making can lead to significant losses. Many traders and investors start their journey thinking they can outsmart the market, but reality soon sets in. The market is not a casino; it's a disciplined game of strategy, patience, and resilience. Here are five crucial lessons every trader and investor must internalize to succeed in the stock market.
             </p>
             <div style={styles.post}>
-                <img src="./images/9.gif" alt="Bajaj Stocks Surge" style={styles.postImage} />
+                <img src="https://res.cloudinary.com/dyrn2eg1j/image/upload/v1726208591/Screenshot_36_jx5yb5.png" alt="Bajaj Stocks Surge" style={styles.postImage} />
 
                 <h2 className="subheading">You Can Never Outsmart the Market</h2>
                 <p style={styles.postText}>
