@@ -22,6 +22,7 @@ import Fest from './blog/festival';
 import It from './blog/it';  
 import Bj from './blog/bjaj';
 import Bj2 from './blog/bjaj2';
+import Five from './blog/five';
 
 const theme = {
   colors: {
@@ -68,6 +69,7 @@ const App = () => {
           <Route path="/it" element={<It />} />
           <Route path="/bjaj" element={<Bj />} />
           <Route path="/bjaj2" element={<Bj2 />} />
+          <Route path="/five" element={<Five />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
