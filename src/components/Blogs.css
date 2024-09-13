@@ -17,7 +17,7 @@
     position: absolute;
     height: 4px;
     width: 60px;
-    background-color: #ff6347;
+    background-color: #1d1412;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -51,11 +51,11 @@
 }
 
 @keyframes colorChange {
-    0% { color: #ff6347; } /* Tomato */
-    25% { color: #ffa500; } /* Orange */
-    50% { color: #32cd32; } /* Lime Green */
-    75% { color: #1e90ff; } /* Dodger Blue */
-    100% { color: #ff1493; } /* Deep Pink */
+    0% { color: #f28572; } /* Tomato */
+    25% { color: #f28572; } /* Orange */
+    50% { color: #f28572; } /* Lime Green */
+    75% { color: #f28572; } /* Dodger Blue */
+    100% { color: #f28572; } /* Deep Pink */
 }
 
 .inline-image {
