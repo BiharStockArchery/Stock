@@ -25,7 +25,7 @@ const Footer = () => {
     }
   };
 
-  const phoneNumber = '+917485089391'; // Your phone number in international format
+  const phoneNumber = '+917645086121'; // Your phone number in international format
   const message = encodeURIComponent('Hi, I was just checking out your website, and Im interested in learning more about your trading floor and live market sessions. Can you provide me with more details?');
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
 
